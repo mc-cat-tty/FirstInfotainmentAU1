@@ -1,0 +1,2529 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Startup",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "backgroundStartup",
+            "Width": 800,
+            "Height": 480,
+            "RelativeFilename": "MMRD_logo_nuovo-800x480.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 707,
+            "Width": 94,
+            "Height": 48,
+            "TextId": "__SingleUse_RP6T",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 186,
+              "Green": 182,
+              "Blue": 182
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "fromStartupToInfotaiment",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 2400
+            }
+          },
+          {
+            "InteractionName": "changeScreen",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "fromStartupToInfotaiment"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionWipe",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "MainInfotaiment"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "MainInfotaiment",
+        "CanvasBufferSize": 12000,
+        "Includes": "",
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "txtGear",
+            "X": 363,
+            "Y": 40,
+            "Width": 75,
+            "Height": 122,
+            "TextId": "__SingleUse_8VH0",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 234
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_B1YM",
+              "UseBuffer": true,
+              "BufferSize": 2
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtSpeed",
+            "X": 670,
+            "Y": 71,
+            "Width": 57,
+            "Height": 36,
+            "TextId": "__SingleUse_UXLR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 234
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_KTQV",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelSpeed",
+            "X": 767,
+            "Y": 78,
+            "Width": 34,
+            "Height": 18,
+            "TextId": "__SingleUse_FQ22",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "X": 752,
+            "Y": 75,
+            "Width": 15,
+            "Height": 42,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "EndY": 45.0,
+            "LineWidth": 10.0,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtRpm",
+            "X": 12,
+            "Y": 71,
+            "Width": 128,
+            "Height": 49,
+            "TextId": "__SingleUse_VS7F",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 234
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_Y39W",
+              "UseBuffer": true,
+              "BufferSize": 7
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelRpm",
+            "X": 158,
+            "Y": 79,
+            "Width": 32,
+            "Height": 18,
+            "TextId": "__SingleUse_4SAL",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxThrottle",
+            "X": 305,
+            "Y": 169,
+            "Width": 190,
+            "Height": 24,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 244,
+              "Green": 255,
+              "Blue": 31
+            },
+            "BorderSize": 4
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxBrake",
+            "X": 305,
+            "Y": 216,
+            "Width": 190,
+            "Height": 24,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 244,
+              "Green": 255,
+              "Blue": 31
+            },
+            "BorderSize": 4
+          },
+          {
+            "Type": "BoxProgress",
+            "Name": "progressThrottle",
+            "X": 308,
+            "Y": 171,
+            "Width": 184,
+            "Height": 20,
+            "Color": {
+              "Red": 9,
+              "Green": 255
+            },
+            "Direction": "Right",
+            "FileNameBackground": "__designer\\Blue_ProgressIndicators_bg_medium_progress_indicator_bg_square_0_degrees.png",
+            "IndicatorPositionX": 2,
+            "IndicatorPositionY": 2,
+            "IndicatorPositionWidth": 180,
+            "IndicatorPositionHeight": 16,
+            "ProgressRangeMax": 100
+          },
+          {
+            "Type": "BoxProgress",
+            "Name": "progressBrakeFront",
+            "X": 308,
+            "Y": 218,
+            "Width": 184,
+            "Height": 20,
+            "Color": {
+              "Red": 245,
+              "Green": 15,
+              "Blue": 15
+            },
+            "Direction": "Right",
+            "FileNameBackground": "__designer\\Blue_ProgressIndicators_bg_medium_progress_indicator_bg_square_0_degrees.png",
+            "IndicatorPositionX": 2,
+            "IndicatorPositionY": 2,
+            "IndicatorPositionWidth": 180,
+            "IndicatorPositionHeight": 16,
+            "ProgressRangeMax": 100
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxBrake_1",
+            "X": 305,
+            "Y": 238,
+            "Width": 190,
+            "Height": 24,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 244,
+              "Green": 255,
+              "Blue": 31
+            },
+            "BorderSize": 4
+          },
+          {
+            "Type": "BoxProgress",
+            "Name": "progressBrakeRear",
+            "X": 308,
+            "Y": 240,
+            "Width": 184,
+            "Height": 20,
+            "Color": {
+              "Red": 245,
+              "Green": 15,
+              "Blue": 15
+            },
+            "Direction": "Right",
+            "FileNameBackground": "__designer\\Blue_ProgressIndicators_bg_medium_progress_indicator_bg_square_0_degrees.png",
+            "IndicatorPositionX": 2,
+            "IndicatorPositionY": 2,
+            "IndicatorPositionWidth": 180,
+            "IndicatorPositionHeight": 16,
+            "ProgressRangeMax": 100
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxRES",
+            "X": 5,
+            "Y": 253,
+            "Width": 135,
+            "Height": 64,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 4
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_1",
+            "X": 143,
+            "Y": 75,
+            "Width": 15,
+            "Height": 42,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "EndY": 45.0,
+            "LineWidth": 10.0,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_1_1",
+            "X": 143,
+            "Y": 154,
+            "Width": 15,
+            "Height": 42,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "EndY": 45.0,
+            "LineWidth": 10.0,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelLapCounter",
+            "X": 158,
+            "Y": 161,
+            "Width": 27,
+            "Height": 18,
+            "TextId": "__SingleUse_IPF6",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtLap",
+            "X": 5,
+            "Y": 150,
+            "Width": 135,
+            "Height": 49,
+            "TextId": "__SingleUse_9DFI",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 234
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_AR7I",
+              "UseBuffer": true,
+              "BufferSize": 3
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelRES",
+            "X": 36,
+            "Y": 267,
+            "Width": 61,
+            "Height": 36,
+            "TextId": "RES",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "BoxProgress",
+            "Name": "progressRpmLow",
+            "X": 12,
+            "Y": 20,
+            "Width": 250,
+            "Height": 20,
+            "Color": {
+              "Red": 9,
+              "Green": 255
+            },
+            "Direction": "Right",
+            "FileNameBackground": "__designer\\progress_bar_large.png",
+            "IndicatorPositionX": 2,
+            "IndicatorPositionY": 2,
+            "IndicatorPositionWidth": 246,
+            "IndicatorPositionHeight": 16,
+            "ProgressRangeMax": 100
+          },
+          {
+            "Type": "BoxProgress",
+            "Name": "progressRpmMed",
+            "X": 275,
+            "Y": 20,
+            "Width": 250,
+            "Height": 20,
+            "Color": {
+              "Red": 255
+            },
+            "Direction": "Right",
+            "FileNameBackground": "__designer\\progress_bar_large.png",
+            "IndicatorPositionX": 2,
+            "IndicatorPositionY": 2,
+            "IndicatorPositionWidth": 246,
+            "IndicatorPositionHeight": 16,
+            "ProgressRangeMax": 100
+          },
+          {
+            "Type": "BoxProgress",
+            "Name": "progressRpmHigh",
+            "X": 536,
+            "Y": 20,
+            "Width": 250,
+            "Height": 20,
+            "Color": {
+              "Red": 149,
+              "Blue": 255
+            },
+            "Direction": "Right",
+            "FileNameBackground": "__designer\\progress_bar_large.png",
+            "IndicatorPositionX": 2,
+            "IndicatorPositionY": 2,
+            "IndicatorPositionWidth": 246,
+            "IndicatorPositionHeight": 16,
+            "ProgressRangeMax": 100
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxTWater",
+            "X": 150,
+            "Y": 373,
+            "Width": 90,
+            "Height": 38,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtTWater",
+            "X": 157,
+            "Y": 383,
+            "Width": 75,
+            "Height": 19,
+            "TextId": "__SingleUse_ROYB",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_K6X0",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxTOil",
+            "X": 150,
+            "Y": 333,
+            "Width": 90,
+            "Height": 38,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxPOil",
+            "X": 150,
+            "Y": 293,
+            "Width": 90,
+            "Height": 38,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtTOil",
+            "X": 157,
+            "Y": 343,
+            "Width": 75,
+            "Height": 19,
+            "TextId": "__SingleUse_YR52",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_ZRFT",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtPOil",
+            "X": 157,
+            "Y": 303,
+            "Width": 75,
+            "Height": 19,
+            "TextId": "__SingleUse_5NKC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_1M75",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxLC",
+            "X": 5,
+            "Y": 321,
+            "Width": 135,
+            "Height": 63,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 4
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelLC",
+            "X": 47,
+            "Y": 335,
+            "Width": 38,
+            "Height": 36,
+            "TextId": "LC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxClutch",
+            "X": 5,
+            "Y": 388,
+            "Width": 135,
+            "Height": 63,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 4
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelClutch",
+            "X": 39,
+            "Y": 402,
+            "Width": 54,
+            "Height": 36,
+            "TextId": "CLUTCH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "scalableImage1",
+            "X": 308,
+            "Y": 340,
+            "Width": 185,
+            "Height": 111,
+            "Filename": "MMRD_logo_nuovo-185x111.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelDS",
+            "X": 766,
+            "Y": 160,
+            "Width": 22,
+            "Height": 18,
+            "TextId": "__SingleUse_67FN",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_2",
+            "X": 751,
+            "Y": 150,
+            "Width": 15,
+            "Height": 42,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "EndY": 45.0,
+            "LineWidth": 10.0,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_2_1",
+            "X": 751,
+            "Y": 195,
+            "Width": 15,
+            "Height": 42,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "EndY": 45.0,
+            "LineWidth": 10.0,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxDS",
+            "X": 586,
+            "Y": 150,
+            "Width": 145,
+            "Height": 42,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelAS",
+            "X": 766,
+            "Y": 207,
+            "Width": 20,
+            "Height": 18,
+            "TextId": "__SingleUse_MIUL",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxAS",
+            "X": 586,
+            "Y": 195,
+            "Width": 145,
+            "Height": 42,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_2_2",
+            "X": 751,
+            "Y": 240,
+            "Width": 15,
+            "Height": 42,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "EndY": 45.0,
+            "LineWidth": 10.0,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxAMI",
+            "X": 586,
+            "Y": 240,
+            "Width": 145,
+            "Height": 42,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_2_1_1_1",
+            "X": 751,
+            "Y": 284,
+            "Width": 15,
+            "Height": 42,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "EndY": 45.0,
+            "LineWidth": 10.0,
+            "LineEndingStyle": "Butt"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxEBS",
+            "X": 586,
+            "Y": 284,
+            "Width": 145,
+            "Height": 42,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelAS_1",
+            "X": 767,
+            "Y": 247,
+            "Width": 29,
+            "Height": 18,
+            "TextId": "__SingleUse_D9LL",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelAS_2",
+            "X": 766,
+            "Y": 290,
+            "Width": 29,
+            "Height": 18,
+            "TextId": "__SingleUse_W7WZ",
+            "TextRotation": "90",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtDS",
+            "X": 595,
+            "Y": 158,
+            "Width": 126,
+            "Height": 24,
+            "TextId": "__SingleUse_J40F",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_Q3EN",
+              "UseBuffer": true,
+              "BufferSize": 40
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtAS",
+            "X": 595,
+            "Y": 202,
+            "Width": 112,
+            "Height": 24,
+            "TextId": "__SingleUse_0J70",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_MCPR"
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtAMI",
+            "X": 595,
+            "Y": 247,
+            "Width": 122,
+            "Height": 24,
+            "TextId": "__SingleUse_74WN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_VLUE",
+              "UseBuffer": true,
+              "BufferSize": 40
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtEBS",
+            "X": 595,
+            "Y": 293,
+            "Width": 30,
+            "Height": 24,
+            "TextId": "__SingleUse_HJ17",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_V415",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxBattery_V",
+            "X": 526,
+            "Y": 376,
+            "Width": 87,
+            "Height": 38,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtBattery_V",
+            "X": 536,
+            "Y": 386,
+            "Width": 70,
+            "Height": 19,
+            "TextId": "__SingleUse_J87C",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_G99E",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "imgOilPres",
+            "X": 242,
+            "Y": 293,
+            "Width": 43,
+            "Height": 38,
+            "RelativeFilename": "oil_pres_ok.png"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxPFuel",
+            "X": 150,
+            "Y": 253,
+            "Width": 90,
+            "Height": 38,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtPFuel",
+            "X": 157,
+            "Y": 263,
+            "Width": 75,
+            "Height": 19,
+            "TextId": "__SingleUse_EUMO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_B7Z3",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "imgOilTemp",
+            "X": 242,
+            "Y": 330,
+            "Width": 43,
+            "Height": 41,
+            "RelativeFilename": "oil_temp_ok.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "imgWaterTemp",
+            "X": 242,
+            "Y": 377,
+            "Width": 43,
+            "Height": 31,
+            "RelativeFilename": "water_low.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "imgTOrin",
+            "X": 246,
+            "Y": 415,
+            "Width": 35,
+            "Height": 34,
+            "RelativeFilename": "orin_t_ok.png"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxTOrin",
+            "X": 150,
+            "Y": 413,
+            "Width": 90,
+            "Height": 38,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtTOrin",
+            "X": 157,
+            "Y": 423,
+            "Width": 75,
+            "Height": 19,
+            "TextId": "__SingleUse_9UXZ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_IMBT",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "imgBatteryV",
+            "X": 529,
+            "Y": 337,
+            "Width": 83,
+            "Height": 48,
+            "RelativeFilename": "battery_ok.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "img24v",
+            "X": 609,
+            "Y": 337,
+            "Width": 83,
+            "Height": 48,
+            "RelativeFilename": "battery_ok.png"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "box24v",
+            "X": 608,
+            "Y": 376,
+            "Width": 87,
+            "Height": 38,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txt24v",
+            "X": 616,
+            "Y": 386,
+            "Width": 70,
+            "Height": 19,
+            "TextId": "__SingleUse_JG35",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_8BB2",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "btnNextPage",
+            "X": 735,
+            "Y": 415,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_next.png",
+            "Released": "btn_next.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "dbgTextArea",
+            "X": 5,
+            "Y": 454,
+            "Width": 741,
+            "Height": 23,
+            "TextId": "__SingleUse_F2RY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 64
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 635,
+            "Y": 414,
+            "Width": 30,
+            "Height": 18,
+            "TextId": "__SingleUse_J3QN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1",
+            "X": 557,
+            "Y": 414,
+            "Width": 30,
+            "Height": 18,
+            "TextId": "__SingleUse_BU43",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 246,
+            "Y": 261,
+            "Width": 42,
+            "Height": 24,
+            "TextId": "__SingleUse_ONGO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Button",
+            "Name": "toDriver1",
+            "X": 308,
+            "Y": 341,
+            "Width": 144,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_disabled.png",
+            "Alpha": 0,
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_60\\tiny_rounded_disabled.json"
+          },
+          {
+            "Type": "Button",
+            "Name": "toDriver2",
+            "X": 351,
+            "Y": 393,
+            "Width": 144,
+            "Height": 60,
+            "Visible": false,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_tiny_rounded_disabled.png",
+            "Alpha": 0,
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_60\\tiny_rounded_disabled.json"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "fromLiveDataToMissionSelect",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnNextPage"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "MissionSelect"
+            }
+          },
+          {
+            "InteractionName": "toDriverEasterEgg1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toDriver1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "DriverScreen"
+            }
+          },
+          {
+            "InteractionName": "toDriverEasterEgg2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toDriver2"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "DriverScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "MissionSelect",
+        "Components": [
+          {
+            "Type": "Button",
+            "Name": "btnNextPage",
+            "X": 735,
+            "Y": 415,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_next.png",
+            "Released": "btn_next.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "btnPrevPage",
+            "X": 17,
+            "Y": 415,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_prev.png",
+            "Released": "btn_prev.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelSelectMission",
+            "X": 258,
+            "Y": 17,
+            "Width": 214,
+            "Height": 36,
+            "TextId": "__SingleUse_U2AM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "chassisResetBtn",
+            "X": 17,
+            "Y": 84,
+            "Width": 214,
+            "Height": 299,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "Y": 93,
+                "TextId": "__SingleUse_5MAQ",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 214,
+                "Height": 299,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 58,
+                  "Green": 121,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 119,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "idleBtn",
+            "X": 270,
+            "Y": 84,
+            "Width": 228,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_normal.png",
+            "TextId": "__SingleUse_W8G5",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_60\\small_rounded_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "trackdriveBtn",
+            "X": 532,
+            "Y": 84,
+            "Width": 228,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_normal.png",
+            "TextId": "__SingleUse_9VBP",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_60\\small_rounded_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "ebsTestBtn",
+            "X": 532,
+            "Y": 164,
+            "Width": 228,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_normal.png",
+            "TextId": "__SingleUse_4TAP",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_60\\small_rounded_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "inspectionBtn",
+            "X": 532,
+            "Y": 244,
+            "Width": 228,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_normal.png",
+            "TextId": "__SingleUse_FFJ8",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_60\\small_rounded_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "manualBtn",
+            "X": 532,
+            "Y": 323,
+            "Width": 228,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_normal.png",
+            "TextId": "__SingleUse_33YC",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_60\\small_rounded_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "debugBtn",
+            "X": 400,
+            "Y": 405,
+            "Width": 228,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_normal.png",
+            "TextId": "__SingleUse_9QUA",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_60\\small_rounded_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "accelerationBtn",
+            "X": 270,
+            "Y": 164,
+            "Width": 228,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_normal.png",
+            "TextId": "__SingleUse_O6Z0",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_60\\small_rounded_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "skidpadBtn",
+            "X": 270,
+            "Y": 244,
+            "Width": 228,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_normal.png",
+            "TextId": "__SingleUse_55VW",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_60\\small_rounded_normal.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "autocrossBtn",
+            "X": 270,
+            "Y": 323,
+            "Width": 228,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_small_rounded_normal.png",
+            "TextId": "__SingleUse_VKZX",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_60\\small_rounded_normal.json"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "fromMissionSelectToCompetitionScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnNextPage"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "CompetitionScreen"
+            }
+          },
+          {
+            "InteractionName": "ChassisReset",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "chassisResetBtn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onChassisResetClicked"
+            }
+          },
+          {
+            "InteractionName": "IdleMission",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "idleBtn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onIdleBtnClicked"
+            }
+          },
+          {
+            "InteractionName": "AccelerationMission",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "accelerationBtn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onAccelerationBtnClicked"
+            }
+          },
+          {
+            "InteractionName": "SkidpadMission",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "skidpadBtn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onSkidpadBtnClicked"
+            }
+          },
+          {
+            "InteractionName": "AutocrossMission",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "autocrossBtn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onAutocrossBtnClicked"
+            }
+          },
+          {
+            "InteractionName": "TrackdriveMission",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "trackdriveBtn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onTrackdriveBtnClicked"
+            }
+          },
+          {
+            "InteractionName": "EbtTestMission",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ebsTestBtn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onEbsTestBtnClicked"
+            }
+          },
+          {
+            "InteractionName": "InspectionMission",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "inspectionBtn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onInspectionBtnClicked"
+            }
+          },
+          {
+            "InteractionName": "ManualMission",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "manualBtn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onManualBtnClicked"
+            }
+          },
+          {
+            "InteractionName": "DebugMission",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "debugBtn"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onDebugBtnClicked"
+            }
+          },
+          {
+            "InteractionName": "fromMissionSelectToMainInfotaiment",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnPrevPage"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "MainInfotaiment"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "CompetitionScreen",
+        "Components": [
+          {
+            "Type": "Button",
+            "Name": "btnPrevPage",
+            "X": 17,
+            "Y": 415,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_prev.png",
+            "Released": "btn_prev.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "btnNextPage",
+            "X": 735,
+            "Y": 415,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_next.png",
+            "Released": "btn_next.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtMission",
+            "Y": 158,
+            "Width": 800,
+            "Height": 165,
+            "TextId": "__SingleUse_1ZY1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_FAAC",
+              "UseBuffer": true,
+              "BufferSize": 15
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "fromCompetitionViewToDriverView",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnNextPage"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "DriverScreen"
+            }
+          },
+          {
+            "InteractionName": "fromCompetitionScreenToMissionSelect",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnPrevPage"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "MissionSelect"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "DriverScreen",
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "txtTmot_1",
+            "X": 531,
+            "Y": 384,
+            "Width": 133,
+            "Height": 73,
+            "TextId": "__SingleUse_DCFN",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "btnPrevPage",
+            "X": 17,
+            "Y": 415,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_prev.png",
+            "Released": "btn_prev.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "btnNextPage",
+            "X": 735,
+            "Y": 415,
+            "Width": 50,
+            "Height": 50,
+            "Pressed": "btn_next.png",
+            "Released": "btn_next.png"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxRpm",
+            "X": 1,
+            "Width": 266,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxLC",
+            "X": 531,
+            "Y": 360,
+            "Width": 133,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxTmot",
+            "X": 134,
+            "Y": 120,
+            "Width": 133,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxCLT",
+            "X": 1,
+            "Y": 240,
+            "Width": 133,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxToil",
+            "X": 134,
+            "Y": 240,
+            "Width": 133,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxRES",
+            "X": 1,
+            "Y": 120,
+            "Width": 133,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxTorin",
+            "X": 134,
+            "Y": 360,
+            "Width": 133,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxBat24",
+            "X": 398,
+            "Y": 360,
+            "Width": 133,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxBat12",
+            "X": 267,
+            "Y": 360,
+            "Width": 131,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxPoil",
+            "X": 531,
+            "Y": 120,
+            "Width": 133,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxPfuel",
+            "X": 531,
+            "Y": 240,
+            "Width": 133,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxTPS",
+            "X": 663,
+            "Y": 120,
+            "Width": 137,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxPbrake",
+            "X": 664,
+            "Y": 240,
+            "Width": 136,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxLap",
+            "X": 267,
+            "Width": 265,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxSpeed",
+            "X": 531,
+            "Width": 269,
+            "Height": 120,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxGear",
+            "X": 267,
+            "Y": 120,
+            "Width": 265,
+            "Height": 240,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtGear",
+            "X": 267,
+            "Y": 120,
+            "Width": 265,
+            "Height": 240,
+            "TextId": "__SingleUse_0O7B",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_BNQX",
+              "UseBuffer": true,
+              "BufferSize": 2
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtRpm",
+            "X": 1,
+            "Y": 24,
+            "Width": 266,
+            "Height": 72,
+            "TextId": "__SingleUse_YH8M",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_2FOI",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtTmot",
+            "X": 134,
+            "Y": 167,
+            "Width": 133,
+            "Height": 73,
+            "TextId": "__SingleUse_73JB",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_HO5R",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelLC",
+            "X": 531,
+            "Y": 384,
+            "Width": 133,
+            "Height": 73,
+            "TextId": "__SingleUse_43VM",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelRES",
+            "X": 1,
+            "Y": 146,
+            "Width": 131,
+            "Height": 69,
+            "TextId": "__SingleUse_A8DL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelCLT",
+            "X": 1,
+            "Y": 264,
+            "Width": 132,
+            "Height": 73,
+            "TextId": "__SingleUse_Y1TQ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelTmot",
+            "X": 134,
+            "Y": 130,
+            "Width": 133,
+            "Height": 37,
+            "TextId": "__SingleUse_S2KY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelToil",
+            "X": 134,
+            "Y": 250,
+            "Width": 133,
+            "Height": 37,
+            "TextId": "__SingleUse_2Q01",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelTorin",
+            "X": 134,
+            "Y": 367,
+            "Width": 133,
+            "Height": 37,
+            "TextId": "__SingleUse_8VFR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelBat12",
+            "X": 268,
+            "Y": 370,
+            "Width": 130,
+            "Height": 37,
+            "TextId": "__SingleUse_DE5T",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelTorin_1_1",
+            "X": 399,
+            "Y": 370,
+            "Width": 130,
+            "Height": 37,
+            "TextId": "__SingleUse_6T5M",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelPoil",
+            "X": 532,
+            "Y": 130,
+            "Width": 132,
+            "Height": 37,
+            "TextId": "__SingleUse_8R8S",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelTPS",
+            "X": 664,
+            "Y": 130,
+            "Width": 136,
+            "Height": 37,
+            "TextId": "__SingleUse_OXBY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelPbrake",
+            "X": 665,
+            "Y": 250,
+            "Width": 131,
+            "Height": 37,
+            "TextId": "__SingleUse_7E8Q",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelPfuel",
+            "X": 532,
+            "Y": 250,
+            "Width": 131,
+            "Height": 37,
+            "TextId": "__SingleUse_Z9U2",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtPoil",
+            "X": 532,
+            "Y": 167,
+            "Width": 131,
+            "Height": 73,
+            "TextId": "__SingleUse_E4IL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_TP9G",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtTPS",
+            "X": 664,
+            "Y": 167,
+            "Width": 137,
+            "Height": 73,
+            "TextId": "__SingleUse_QBHD",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_2VKQ",
+              "UseBuffer": true,
+              "BufferSize": 3
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtPbrake",
+            "X": 664,
+            "Y": 287,
+            "Width": 136,
+            "Height": 73,
+            "TextId": "__SingleUse_IEE9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_5Z8O",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtBat24",
+            "X": 399,
+            "Y": 407,
+            "Width": 130,
+            "Height": 73,
+            "TextId": "__SingleUse_BB62",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_1E1Q",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtPfuel",
+            "X": 533,
+            "Y": 287,
+            "Width": 131,
+            "Height": 73,
+            "TextId": "__SingleUse_Q9H4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_AJ0J",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtBat12",
+            "X": 267,
+            "Y": 407,
+            "Width": 131,
+            "Height": 73,
+            "TextId": "__SingleUse_1UNR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_KOX0",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtToil",
+            "X": 134,
+            "Y": 287,
+            "Width": 133,
+            "Height": 73,
+            "TextId": "__SingleUse_BID7",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_CUPH",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtTorin",
+            "X": 134,
+            "Y": 404,
+            "Width": 133,
+            "Height": 76,
+            "TextId": "__SingleUse_T9US",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_IM6N",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtLap",
+            "X": 267,
+            "Y": 24,
+            "Width": 264,
+            "Height": 72,
+            "TextId": "__SingleUse_QZ30",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_1QOJ",
+              "UseBuffer": true,
+              "BufferSize": 2
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "txtSpeed",
+            "X": 532,
+            "Y": 24,
+            "Width": 268,
+            "Height": 72,
+            "TextId": "__SingleUse_0URK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_AHJH",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "fromDriverScreenToMainInfotaiment",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnNextPage"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "MainInfotaiment"
+            }
+          },
+          {
+            "InteractionName": "fromDriverScreenToCompetitionScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "btnPrevPage"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "CompetitionScreen"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "missionBtnContainer",
+        "Width": 214,
+        "Height": 36,
+        "Components": [
+          {
+            "Type": "AnimatedImage",
+            "Name": "animatedImage1",
+            "Width": 214,
+            "Height": 36,
+            "FileNameFirst": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_normal.png",
+            "FileNameLast": "__generated\\alternate_theme_images_widgets_button_regular_height_36_medium_rounded_pressed.png",
+            "UpdateTicksInterval": 200
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "Y": 6,
+            "Width": 214,
+            "Height": 24,
+            "TextId": "__SingleUse_9IUL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "Name": "FirstInfotainmentAU1",
+    "Resolution": {
+      "Width": 800,
+      "Height": 480
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Startup",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "24": "LCD24bpp",
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 800,
+        "Height": 480
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j10",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile -j10 flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F4",
+    "SubFamily": "STM32F469/479",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m4",
+    "ProjectFile": "../STM32F469I-DISCO-REV-AU1.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "Vector"
+    ]
+  },
+  "Version": "4.22.0",
+  "CreatedBy": "4.22.0"
+}

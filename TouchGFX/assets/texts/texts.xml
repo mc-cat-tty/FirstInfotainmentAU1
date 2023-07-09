@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.22.0">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Missions">
+      <Text Id="missionIdle" Alignment="Center" TypographyId="Medium">
+        <Translation Language="GB">Idle</Translation>
+      </Text>
+      <Text Id="missionManual" Alignment="Center" TypographyId="Medium">
+        <Translation Language="GB">Manual</Translation>
+      </Text>
+      <Text Id="missionDebug" Alignment="Center" TypographyId="Medium">
+        <Translation Language="GB">Debug</Translation>
+      </Text>
+      <Text Id="missionAutocross" Alignment="Center" TypographyId="Medium">
+        <Translation Language="GB">Autocross</Translation>
+      </Text>
+      <Text Id="missionInspection" Alignment="Center" TypographyId="Medium">
+        <Translation Language="GB">Inspection</Translation>
+      </Text>
+      <Text Id="missionEbsTest" Alignment="Center" TypographyId="Medium">
+        <Translation Language="GB">Ebs test</Translation>
+      </Text>
+      <Text Id="missionTrackdrive" Alignment="Center" TypographyId="Medium">
+        <Translation Language="GB">Trackdrive</Translation>
+      </Text>
+      <Text Id="missionSkidpad" Alignment="Center" TypographyId="Medium">
+        <Translation Language="GB">Skidpad</Translation>
+      </Text>
+      <Text Id="missionAcceleration" Alignment="Center" TypographyId="Medium">
+        <Translation Language="GB">Acceleration</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Group1">
+      <Text Id="Battery_V" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">Battery_V</Translation>
+      </Text>
+      <Text Id="CLUTCH" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">CLT</Translation>
+      </Text>
+      <Text Id="LC" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">LC</Translation>
+      </Text>
+      <Text Id="RES" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">RES</Translation>
+      </Text>
+      <Text Id="ResourceId1" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">Toil</Translation>
+      </Text>
+      <Text Id="Toil" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">T_oil</Translation>
+      </Text>
+      <Text Id="Poil" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">P_oil</Translation>
+      </Text>
+      <Text Id="Twater" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">T_water</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_A8DL" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">RES</Translation>
+      </Text>
+      <Text Id="DriverScreenGlyphs" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">1234567890%.</Translation>
+      </Text>
+      <Text Id="__SingleUse_DCFN" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">LC</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y1TQ" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">CLT</Translation>
+      </Text>
+      <Text Id="__SingleUse_43VM" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">LC</Translation>
+      </Text>
+      <Text Id="__SingleUse_7E8Q" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">P Brake</Translation>
+      </Text>
+      <Text Id="__SingleUse_OXBY" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">TPS</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z9U2" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">P Fuel</Translation>
+      </Text>
+      <Text Id="__SingleUse_8R8S" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">P Oil</Translation>
+      </Text>
+      <Text Id="__SingleUse_6T5M" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Bat 24</Translation>
+      </Text>
+      <Text Id="__SingleUse_DE5T" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Bat 12</Translation>
+      </Text>
+      <Text Id="__SingleUse_8VFR" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">T Orin</Translation>
+      </Text>
+      <Text Id="__SingleUse_2Q01" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">T Oil</Translation>
+      </Text>
+      <Text Id="__SingleUse_S2KY" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">T Mot</Translation>
+      </Text>
+      <Text Id="__SingleUse_1E1Q" Alignment="Left" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">24.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_BB62" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_5Z8O" Alignment="Left" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">100</Translation>
+      </Text>
+      <Text Id="__SingleUse_IEE9" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_2VKQ" Alignment="Left" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_QBHD" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">&lt;value&gt;%</Translation>
+      </Text>
+      <Text Id="__SingleUse_KOX0" Alignment="Left" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">12.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_1UNR" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AJ0J" Alignment="Left" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">0.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q9H4" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_TP9G" Alignment="Left" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_E4IL" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_IM6N" Alignment="Left" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">100</Translation>
+      </Text>
+      <Text Id="__SingleUse_T9US" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CUPH" Alignment="Left" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">100</Translation>
+      </Text>
+      <Text Id="__SingleUse_BID7" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_HO5R" Alignment="Left" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">100</Translation>
+      </Text>
+      <Text Id="__SingleUse_73JB" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AHJH" Alignment="Left" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">100</Translation>
+      </Text>
+      <Text Id="__SingleUse_0URK" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">&lt;value&gt; kmh</Translation>
+      </Text>
+      <Text Id="__SingleUse_1QOJ" Alignment="Left" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_2FOI" Alignment="Left" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">12000</Translation>
+      </Text>
+      <Text Id="__SingleUse_QZ30" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">LAP &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_YH8M" Alignment="Center" TypographyId="SecondaryDriverInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="Neutral" Alignment="Left" TypographyId="PrimaryDriverInfo">
+        <Translation Language="GB">N</Translation>
+      </Text>
+      <Text Id="Fifth" Alignment="Left" TypographyId="PrimaryDriverInfo">
+        <Translation Language="GB">5</Translation>
+      </Text>
+      <Text Id="Fourth" Alignment="Left" TypographyId="PrimaryDriverInfo">
+        <Translation Language="GB">4</Translation>
+      </Text>
+      <Text Id="Third" Alignment="Left" TypographyId="PrimaryDriverInfo">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="Second" Alignment="Left" TypographyId="PrimaryDriverInfo">
+        <Translation Language="GB">2</Translation>
+      </Text>
+      <Text Id="First" Alignment="Left" TypographyId="PrimaryDriverInfo">
+        <Translation Language="GB">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_BNQX" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">N</Translation>
+      </Text>
+      <Text Id="__SingleUse_0O7B" Alignment="Center" TypographyId="PrimaryDriverInfo">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="ResourceId2" Alignment="Left" TypographyId="Enormous">
+        <Translation Language="GB">Test</Translation>
+      </Text>
+      <Text Id="__SingleUse_FAAC" Alignment="Left" TypographyId="Enormous">
+        <Translation Language="GB">None</Translation>
+      </Text>
+      <Text Id="__SingleUse_1ZY1" Alignment="Center" TypographyId="Enormous">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_9QUA" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Debug</Translation>
+      </Text>
+      <Text Id="ResourceId4" Alignment="Center" TypographyId="Enormous">
+        <Translation Language="GB">Debug</Translation>
+      </Text>
+      <Text Id="__SingleUse_33YC" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Manual</Translation>
+      </Text>
+      <Text Id="ResourceId5" Alignment="Center" TypographyId="Enormous">
+        <Translation Language="GB">Manual</Translation>
+      </Text>
+      <Text Id="__SingleUse_FFJ8" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Inspection</Translation>
+      </Text>
+      <Text Id="ResourceId6" Alignment="Center" TypographyId="Enormous">
+        <Translation Language="GB">Inspection</Translation>
+      </Text>
+      <Text Id="__SingleUse_4TAP" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">EBS Test</Translation>
+      </Text>
+      <Text Id="ResourceId3" Alignment="Center" TypographyId="Enormous">
+        <Translation Language="GB">EBS Test</Translation>
+      </Text>
+      <Text Id="__SingleUse_9VBP" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Trackdrive</Translation>
+      </Text>
+      <Text Id="ResourceId7" Alignment="Center" TypographyId="Enormous">
+        <Translation Language="GB">Trackdrive</Translation>
+      </Text>
+      <Text Id="__SingleUse_VKZX" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Autocross</Translation>
+      </Text>
+      <Text Id="ResourceId8" Alignment="Center" TypographyId="Enormous">
+        <Translation Language="GB">Autocross</Translation>
+      </Text>
+      <Text Id="__SingleUse_55VW" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Skidpad</Translation>
+      </Text>
+      <Text Id="ResourceId9" Alignment="Center" TypographyId="Enormous">
+        <Translation Language="GB">Skidpad</Translation>
+      </Text>
+      <Text Id="__SingleUse_O6Z0" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Acceleration</Translation>
+      </Text>
+      <Text Id="ResourceId10" Alignment="Center" TypographyId="Enormous">
+        <Translation Language="GB">Acceleration</Translation>
+      </Text>
+      <Text Id="__SingleUse_W8G5" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Idle</Translation>
+      </Text>
+      <Text Id="ResourceId11" Alignment="Center" TypographyId="Enormous">
+        <Translation Language="GB">Idle</Translation>
+      </Text>
+      <Text Id="__SingleUse_ONGO" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">Fuel</Translation>
+      </Text>
+      <Text Id="__SingleUse_B7Z3" Alignment="Left" TypographyId="little_medium">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_EUMO" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">&lt;value&gt; bar</Translation>
+      </Text>
+      <Text Id="__SingleUse_5MAQ" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Chassis&#10;Reset</Translation>
+      </Text>
+      <Text Id="__SingleUse_IPF6" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">LAP</Translation>
+      </Text>
+      <Text Id="__SingleUse_AR7I" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">13</Translation>
+      </Text>
+      <Text Id="__SingleUse_9DFI" Alignment="Right" TypographyId="Speed">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_BU43" Alignment="Left" TypographyId="little_medium">
+        <Translation Language="GB">12V</Translation>
+      </Text>
+      <Text Id="__SingleUse_J3QN" Alignment="Left" TypographyId="little_medium">
+        <Translation Language="GB">24V</Translation>
+      </Text>
+      <Text Id="__SingleUse_8BB2" Alignment="Left" TypographyId="little_medium">
+        <Translation Language="GB">00.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_JG35" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_IMBT" Alignment="Left" TypographyId="little_medium">
+        <Translation Language="GB">100</Translation>
+      </Text>
+      <Text Id="__SingleUse_9UXZ" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_9IUL" Alignment="Center" TypographyId="Medium">
+        <Translation Language="GB">New Text</Translation>
+      </Text>
+      <Text Id="__SingleUse_F2RY" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_U2AM" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">Select Mission</Translation>
+      </Text>
+      <Text Id="__SingleUse_G99E" Alignment="Left" TypographyId="little_medium">
+        <Translation Language="GB">00.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_J87C" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_RP6T" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Special Thanks to:&#10;Fattore G,&#10;Fattore B,&#10;Fattore M</Translation>
+      </Text>
+      <Text Id="__SingleUse_V415" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">Off</Translation>
+      </Text>
+      <Text Id="__SingleUse_HJ17" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_VLUE" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">Acceleration</Translation>
+      </Text>
+      <Text Id="__SingleUse_74WN" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_MCPR" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">Emergency</Translation>
+      </Text>
+      <Text Id="__SingleUse_0J70" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q3EN" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">Autonomous</Translation>
+      </Text>
+      <Text Id="__SingleUse_J40F" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_W7WZ" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">EBS</Translation>
+      </Text>
+      <Text Id="__SingleUse_D9LL" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">AMI</Translation>
+      </Text>
+      <Text Id="__SingleUse_MIUL" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">AS</Translation>
+      </Text>
+      <Text Id="__SingleUse_67FN" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">DS</Translation>
+      </Text>
+      <Text Id="__SingleUse_1M75" Alignment="Left" TypographyId="little_medium">
+        <Translation Language="GB">0.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_5NKC" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">&lt;value&gt; bar</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZRFT" Alignment="Left" TypographyId="little_medium">
+        <Translation Language="GB">100</Translation>
+      </Text>
+      <Text Id="__SingleUse_YR52" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_K6X0" Alignment="Left" TypographyId="little_medium">
+        <Translation Language="GB">100</Translation>
+      </Text>
+      <Text Id="__SingleUse_ROYB" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">&lt;value&gt; °C</Translation>
+      </Text>
+      <Text Id="__SingleUse_4SAL" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">RPM</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y39W" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">10000</Translation>
+      </Text>
+      <Text Id="__SingleUse_VS7F" Alignment="Left" TypographyId="Speed">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_FQ22" Alignment="Center" TypographyId="little_medium">
+        <Translation Language="GB">KMH</Translation>
+      </Text>
+      <Text Id="__SingleUse_KTQV" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">100</Translation>
+      </Text>
+      <Text Id="__SingleUse_UXLR" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_B1YM" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">N</Translation>
+      </Text>
+      <Text Id="__SingleUse_8VH0" Alignment="Left" TypographyId="Gear">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Large" Font="verdana.ttf" Size="30" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Gear" Font="verdana.ttf" Size="100" Bpp="4" Direction="LTR" FallbackCharacter="N" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Speed" Font="verdana.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="Medium" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacters=": ." WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="little_medium" Font="verdana.ttf" Size="15" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Med_Large" Font="verdana.ttf" Size="30" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
+    <Typography Id="Enormous" Font="verdana.ttf" Size="120" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="PrimaryDriverInfo" Font="verdana.ttf" Size="180" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="SecondaryDriverInfo" Font="verdana.ttf" Size="57" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+  </Typographies>
+</TextDatabase>

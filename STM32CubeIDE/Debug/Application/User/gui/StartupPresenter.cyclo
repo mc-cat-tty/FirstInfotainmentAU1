@@ -1,0 +1,9 @@
+ModelListener.hpp:13:18:virtual void ModelListener::gearChanged()	1
+ModelListener.hpp:14:18:virtual void ModelListener::infoChanged()	1
+ModelListener.hpp:15:18:virtual void ModelListener::debugMessageChanged()	1
+ModelListener.hpp:16:18:virtual void ModelListener::missionChanged()	1
+StartupPresenter.hpp:28:13:StartupPresenter::~StartupPresenter()	1
+StartupPresenter.cpp:10:6:virtual void StartupPresenter::activate()	1
+StartupPresenter.hpp:28:13:virtual StartupPresenter::~StartupPresenter()	1
+StartupPresenter.hpp:28:13:virtual void* StartupPresenter::_ZThn4_N16StartupPresenterD1Ev()	1
+StartupPresenter.cpp:4:1:StartupPresenter::StartupPresenter(StartupView&)	1

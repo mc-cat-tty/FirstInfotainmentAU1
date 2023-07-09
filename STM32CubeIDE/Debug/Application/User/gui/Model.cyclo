@@ -1,0 +1,5 @@
+Model.cpp:7:1:Model::Model()	1
+Model.cpp:52:6:void Model::tick()	3
+Model.cpp:125:6:void Model::requestChassisReset()	1
+Model.cpp:136:6:void Model::commonAfterRequestMission(MmrMission)	1
+Model.cpp:116:6:void Model::requestMission(MmrMission)	1

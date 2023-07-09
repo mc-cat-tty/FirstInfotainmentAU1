@@ -1,0 +1,6 @@
+Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
+StartupView.cpp:13:6:virtual void StartupView::tearDownScreen()	1
+StartupView.hpp:11:13:StartupView::~StartupView()	1
+StartupView.hpp:11:13:virtual StartupView::~StartupView()	1
+StartupView.cpp:3:1:StartupView::StartupView()	1
+StartupView.cpp:8:6:virtual void StartupView::setupScreen()	1
