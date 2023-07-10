@@ -22,7 +22,7 @@ extern osMessageQueueId_t mainToGuiMsgQueue;
 extern SPI_HandleTypeDef hspi2;
 
 displayInfo msgDisplayInfo;
-int gear_six_count = 0, gear_mem = 0;
+int gear_mem = 0;
 
 MmrPin mcp2515csPin;
 MmrPin* spiSlavePins[] = { &mcp2515csPin };
@@ -279,17 +279,7 @@ void process_single_can_message(MmrCanMessage* msg) {
 
       uint8_t gear = msg->payload[4]; /* No need to read msg->payload[5] since it will ALWAYS be 0! */
       gear_mem = gear;
-      if (gear == 6)
-      {
-        gear_six_count++;
-        if (gear_six_count == 3)
-          msgDisplayInfo.gear = gear;
-      }
-      else
-      {
-        gear_six_count = 0;
-        msgDisplayInfo.gear = gear;
-      }
+	  msgDisplayInfo.gear = gear;
 
       if (gear == 0) {
     	  // MMR_LED_Set(&neutralLed, MMR_LED_ON);
