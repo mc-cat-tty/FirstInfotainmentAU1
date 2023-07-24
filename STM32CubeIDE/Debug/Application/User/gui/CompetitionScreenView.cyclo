@@ -1,0 +1,9 @@
+Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
+Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
+Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
+CompetitionScreenView.cpp:10:6:virtual void CompetitionScreenView::tearDownScreen()	1
+CompetitionScreenView.hpp:11:13:CompetitionScreenView::~CompetitionScreenView()	1
+CompetitionScreenView.hpp:11:13:virtual CompetitionScreenView::~CompetitionScreenView()	1
+CompetitionScreenView.cpp:3:1:CompetitionScreenView::CompetitionScreenView()	1
+CompetitionScreenView.cpp:5:6:virtual void CompetitionScreenView::setupScreen()	1
+CompetitionScreenView.cpp:15:6:void CompetitionScreenView::setMission(const char*)	1

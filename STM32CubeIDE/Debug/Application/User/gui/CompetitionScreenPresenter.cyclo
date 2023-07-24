@@ -1,0 +1,10 @@
+ModelListener.hpp:13:18:virtual void ModelListener::gearChanged()	1
+ModelListener.hpp:14:18:virtual void ModelListener::infoChanged()	1
+ModelListener.hpp:15:18:virtual void ModelListener::debugMessageChanged()	1
+CompetitionScreenPresenter.hpp:28:13:CompetitionScreenPresenter::~CompetitionScreenPresenter()	1
+CompetitionScreenPresenter.cpp:10:6:virtual void CompetitionScreenPresenter::activate()	1
+CompetitionScreenPresenter.cpp:15:6:virtual void CompetitionScreenPresenter::deactivate()	1
+CompetitionScreenPresenter.hpp:28:13:virtual CompetitionScreenPresenter::~CompetitionScreenPresenter()	1
+CompetitionScreenPresenter.cpp:20:6:virtual void CompetitionScreenPresenter::missionChanged()	1
+CompetitionScreenPresenter.hpp:28:13:virtual void* CompetitionScreenPresenter::_ZThn4_N26CompetitionScreenPresenterD1Ev()	1
+CompetitionScreenPresenter.cpp:4:1:CompetitionScreenPresenter::CompetitionScreenPresenter(CompetitionScreenView&)	1

@@ -13,11 +13,11 @@ void DriverScreenView::tearDownScreen() {
 
 void DriverScreenView::setGear(int gear) {
 	if (gear == 0) {
-		Unicode::strncpy(txtGearBuffer, "N", TXTGEAR_SIZE);
-		return;
+		Unicode::snprintf(txtGearBuffer, TXTGEAR_SIZE, "%c", 'N');
 	}
-
-	Unicode::snprintf(txtGearBuffer, TXTGEAR_SIZE, "%d", gear);
+	else {
+		Unicode::snprintf(txtGearBuffer, TXTGEAR_SIZE, "%d", gear);
+	}
 
 	txtGear.invalidate();
 }

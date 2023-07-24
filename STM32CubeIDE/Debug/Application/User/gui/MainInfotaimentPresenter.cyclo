@@ -1,0 +1,11 @@
+ModelListener.hpp:16:18:virtual void ModelListener::missionChanged()	1
+MainInfotaimentPresenter.hpp:30:13:MainInfotaimentPresenter::~MainInfotaimentPresenter()	1
+MainInfotaimentPresenter.cpp:15:6:virtual void MainInfotaimentPresenter::activate()	1
+MainInfotaimentPresenter.cpp:21:6:virtual void MainInfotaimentPresenter::deactivate()	1
+MainInfotaimentPresenter.hpp:30:13:virtual MainInfotaimentPresenter::~MainInfotaimentPresenter()	1
+MainInfotaimentPresenter.cpp:26:6:virtual void MainInfotaimentPresenter::gearChanged()	1
+MainInfotaimentPresenter.cpp:31:6:virtual void MainInfotaimentPresenter::infoChanged()	1
+MainInfotaimentPresenter.cpp:61:6:virtual void MainInfotaimentPresenter::debugMessageChanged()	1
+MainInfotaimentPresenter.hpp:30:13:virtual void* MainInfotaimentPresenter::_ZThn4_N24MainInfotaimentPresenterD1Ev()	1
+MainInfotaimentPresenter.cpp:4:1:MainInfotaimentPresenter::MainInfotaimentPresenter(MainInfotaimentView&)	1
+MainInfotaimentPresenter.cpp:10:6:void MainInfotaimentPresenter::TESTFUNCTION()	1

@@ -2380,7 +2380,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_1QOJ",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             }
           },
           {

@@ -99,7 +99,7 @@ protected:
     touchgfx::Unicode::UnicodeChar txtToilBuffer[TXTTOIL_SIZE];
     static const uint16_t TXTTORIN_SIZE = 4;
     touchgfx::Unicode::UnicodeChar txtTorinBuffer[TXTTORIN_SIZE];
-    static const uint16_t TXTLAP_SIZE = 2;
+    static const uint16_t TXTLAP_SIZE = 3;
     touchgfx::Unicode::UnicodeChar txtLapBuffer[TXTLAP_SIZE];
     static const uint16_t TXTSPEED_SIZE = 8;
     touchgfx::Unicode::UnicodeChar txtSpeedBuffer[TXTSPEED_SIZE];

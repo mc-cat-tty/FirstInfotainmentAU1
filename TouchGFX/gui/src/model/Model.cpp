@@ -24,7 +24,7 @@ void Model::tick() {
   setOrinTemperature(t % 100);
   setVoltage24v(25.0f);
   setBattery_v(13.0f);
-  setLap(t % 6);
+  setLap(t % 20);
   setP_Fuel((float)(t % 999) / 100);
   setP_oil((float)(t % 999) / 100);
   setT_oil(t % 200);

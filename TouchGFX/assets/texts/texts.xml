@@ -163,7 +163,7 @@
         <Translation Language="GB">&lt;value&gt; kmh</Translation>
       </Text>
       <Text Id="__SingleUse_1QOJ" Alignment="Left" TypographyId="SecondaryDriverInfo">
-        <Translation Language="GB">1</Translation>
+        <Translation Language="GB">10</Translation>
       </Text>
       <Text Id="__SingleUse_2FOI" Alignment="Left" TypographyId="SecondaryDriverInfo">
         <Translation Language="GB">12000</Translation>

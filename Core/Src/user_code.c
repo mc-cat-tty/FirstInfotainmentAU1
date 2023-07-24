@@ -274,22 +274,9 @@ void process_single_can_message(MmrCanMessage* msg) {
     case MMR_CAN_MESSAGE_ID_ECU_ENGINE_FN1:
       msgDisplayInfo.rpm = (msg->payload[1] << 8) | msg->payload[0];
 
-      uint16_t speed = (msg->payload[3] << 8) | msg->payload[2];
-      msgDisplayInfo.speed = (unsigned char)(speed / 100);
-
       uint8_t gear = msg->payload[4]; /* No need to read msg->payload[5] since it will ALWAYS be 0! */
       gear_mem = gear;
-      if (gear == 6)
-      {
-        gear_six_count++;
-        if (gear_six_count == 3)
-          msgDisplayInfo.gear = gear;
-      }
-      else
-      {
-        gear_six_count = 0;
-        msgDisplayInfo.gear = gear;
-      }
+      msgDisplayInfo.gear = gear;
 
       if (gear == 0) {
     	  // MMR_LED_Set(&neutralLed, MMR_LED_ON);
@@ -303,6 +290,10 @@ void process_single_can_message(MmrCanMessage* msg) {
       uint16_t throttle = (msg->payload[7] << 8) | msg->payload[6];
       msgDisplayInfo.throttle_perc = (unsigned char)(throttle / 100);
       break;
+
+    case MMR_CAN_MESSAGE_ID_D_SPEED_ODOMETRY:
+	  msgDisplayInfo.speed = (unsigned char) msg->payload[0];
+	  break;
 
     /* TOIL, TWATER */
     case 0x701:

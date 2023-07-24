@@ -1,0 +1,11 @@
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:18:virtual void ModelListener::missionChanged()	0	static
+../../TouchGFX/gui/include/gui/maininfotaiment_screen/MainInfotaimentPresenter.hpp:30:13:MainInfotaimentPresenter::~MainInfotaimentPresenter()	0	static
+C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentPresenter.cpp:15:6:virtual void MainInfotaimentPresenter::activate()	8	static
+C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentPresenter.cpp:21:6:virtual void MainInfotaimentPresenter::deactivate()	0	static
+../../TouchGFX/gui/include/gui/maininfotaiment_screen/MainInfotaimentPresenter.hpp:30:13:virtual MainInfotaimentPresenter::~MainInfotaimentPresenter()	8	static
+C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentPresenter.cpp:26:6:virtual void MainInfotaimentPresenter::gearChanged()	0	static
+C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentPresenter.cpp:31:6:virtual void MainInfotaimentPresenter::infoChanged()	8	static
+C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentPresenter.cpp:61:6:virtual void MainInfotaimentPresenter::debugMessageChanged()	0	static
+../../TouchGFX/gui/include/gui/maininfotaiment_screen/MainInfotaimentPresenter.hpp:30:13:virtual void* MainInfotaimentPresenter::_ZThn4_N24MainInfotaimentPresenterD1Ev()	0	static
+C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentPresenter.cpp:4:1:MainInfotaimentPresenter::MainInfotaimentPresenter(MainInfotaimentView&)	8	static
+C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentPresenter.cpp:10:6:void MainInfotaimentPresenter::TESTFUNCTION()	0	static
