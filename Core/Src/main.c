@@ -672,39 +672,16 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOA, FRAME_RATE_Pin|VSYNC_FREQ_Pin|RENDER_TIME_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOH, GPIO_PIN_7, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(DASHBOARD_NEUTRAL_LED_GPIO_Port, DASHBOARD_NEUTRAL_LED_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : DASHBORD_NEUTRAL_LED_Pin */
-    GPIO_InitStruct.Pin = GPIO_PIN_11;
-    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-    HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOH, GPIO_PIN_7|MCP2515_CS_Pin, GPIO_PIN_RESET);
 
-
-	/*Configure GPIO pin : STEERING_RIGHT_RED_BUTTON_Pin */
-	GPIO_InitStruct.Pin = STEERING_RIGHT_RED_BUTTON_Pin;
-	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-	GPIO_InitStruct.Pull = GPIO_PULLUP;
-	HAL_GPIO_Init(STEERING_RIGHT_RED_BUTTON_GPIO_Port, &GPIO_InitStruct);
-
-	/*Configure GPIO pin : STEERING_LEFT_RED_BUTTON_Pin */
-	  GPIO_InitStruct.Pin = STEERING_LEFT_RED_BUTTON_Pin;
-	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-	  GPIO_InitStruct.Pull = GPIO_PULLUP;
-	  HAL_GPIO_Init(STEERING_LEFT_RED_BUTTON_GPIO_Port, &GPIO_InitStruct);
-
-	  /*Configure GPIO pins : STEERING_RIGHT_PADDLE_BUTTON_Pin STEERING_GREEN_BUTTON_Pin */
-	  GPIO_InitStruct.Pin = STEERING_RIGHT_PADDLE_BUTTON_Pin|STEERING_GREEN_BUTTON_Pin;
-	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-	  GPIO_InitStruct.Pull = GPIO_PULLUP;
-	  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
-
-	  /*Configure GPIO pin : STEERING_LEFT_PADDLE_BUTTON_Pin */
-	  GPIO_InitStruct.Pin = STEERING_LEFT_PADDLE_BUTTON_Pin;
-	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-	  GPIO_InitStruct.Pull = GPIO_PULLUP;
-	  HAL_GPIO_Init(STEERING_LEFT_PADDLE_BUTTON_GPIO_Port, &GPIO_InitStruct);
+  /*Configure GPIO pin : STEERING_RIGHT_RED_BUTTON_Pin */
+  GPIO_InitStruct.Pin = STEERING_RIGHT_RED_BUTTON_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(STEERING_RIGHT_RED_BUTTON_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : MCU_ACTIVE_Pin */
   GPIO_InitStruct.Pin = MCU_ACTIVE_Pin;
@@ -727,12 +704,44 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+  /*Configure GPIO pins : STEERING_LEFT_RED_BUTTON_Pin STEERING_RIGHT_PADDLE_BUTTON_Pin */
+  GPIO_InitStruct.Pin = STEERING_LEFT_RED_BUTTON_Pin|STEERING_RIGHT_PADDLE_BUTTON_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : DASHBOARD_NEUTRAL_LED_Pin */
+  GPIO_InitStruct.Pin = DASHBOARD_NEUTRAL_LED_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(DASHBOARD_NEUTRAL_LED_GPIO_Port, &GPIO_InitStruct);
+
   /*Configure GPIO pin : PH7 */
   GPIO_InitStruct.Pin = GPIO_PIN_7;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(GPIOH, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : STEERING_GREEN_BUTTON_Pin */
+  GPIO_InitStruct.Pin = STEERING_GREEN_BUTTON_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(STEERING_GREEN_BUTTON_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : MCP2515_CS_Pin */
+  GPIO_InitStruct.Pin = MCP2515_CS_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(MCP2515_CS_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : STEERING_LEFT_PADDLE_BUTTON_Pin */
+  GPIO_InitStruct.Pin = STEERING_LEFT_PADDLE_BUTTON_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(STEERING_LEFT_PADDLE_BUTTON_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

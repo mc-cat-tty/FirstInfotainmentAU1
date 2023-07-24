@@ -279,14 +279,8 @@ void process_single_can_message(MmrCanMessage* msg) {
       msgDisplayInfo.gear = gear;
 	  msgDisplayInfo.gear = gear;
 
-      if (gear == 0) {
-    	  // MMR_LED_Set(&neutralLed, MMR_LED_ON);
-    	  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_11, 1);
-      }
-      else {
-    	  // MMR_LED_Set(&neutralLed, MMR_LED_OFF);
-    	  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_11, 0);
-      }
+	  GPIO_PinState neutralLedState = gear == 0? GPIO_PIN_SET : GPIO_PIN_RESET;
+	  HAL_GPIO_WritePin(DASHBOARD_NEUTRAL_LED_GPIO_Port, DASHBOARD_NEUTRAL_LED_Pin, neutralLedState);
 
       uint16_t throttle = (msg->payload[7] << 8) | msg->payload[6];
       msgDisplayInfo.throttle_perc = (unsigned char)(throttle / 100);
