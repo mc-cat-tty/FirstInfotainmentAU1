@@ -45,5 +45,12 @@ Drivers/BSP/STM32469I-Discovery \
 Drivers/CMSIS \
 Drivers/STM32F4xx_HAL_Driver \
 Middlewares/FreeRTOS \
-Src \
+buffer \
+can \
+gpio \
+mcp2515 \
+net \
+spi \
+stm \
+timing \
 

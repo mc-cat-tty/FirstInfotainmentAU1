@@ -115,9 +115,9 @@
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_2VKQ" Alignment="Left" TypographyId="SecondaryDriverInfo">
-        <Translation Language="GB">00</Translation>
+        <Translation Language="GB">000</Translation>
       </Text>
-      <Text Id="__SingleUse_QBHD" Alignment="Center" TypographyId="SecondaryDriverInfo">
+      <Text Id="__SingleUse_QBHD" Alignment="Right" TypographyId="SecondaryDriverInfo">
         <Translation Language="GB">&lt;value&gt;%</Translation>
       </Text>
       <Text Id="__SingleUse_KOX0" Alignment="Left" TypographyId="SecondaryDriverInfo">
@@ -405,6 +405,6 @@
     <Typography Id="Med_Large" Font="verdana.ttf" Size="30" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="a-z,A-Z,0-9" />
     <Typography Id="Enormous" Font="verdana.ttf" Size="120" Bpp="4" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="PrimaryDriverInfo" Font="verdana.ttf" Size="180" Bpp="4" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="SecondaryDriverInfo" Font="verdana.ttf" Size="57" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="SecondaryDriverInfo" Font="verdana.ttf" Size="46" Bpp="4" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

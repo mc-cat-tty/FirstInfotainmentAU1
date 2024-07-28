@@ -37,7 +37,7 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
         // verdana_180_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[7]);
     case Typography::SECONDARYDRIVERINFO:
-        // verdana_57_4bpp
+        // verdana_46_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[8]);
     default:
         return 0;

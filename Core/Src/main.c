@@ -19,6 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "user_code.c"
 #include "cmsis_os.h"
 #include "app_touchgfx.h"
 
@@ -36,6 +37,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define BUFFER_SIZE 10
 /* DISPLAY */
 #define LCD_ORIENTATION_LANDSCAPE 0x01
 /* USER CODE END PD */
@@ -66,7 +68,7 @@ SDRAM_HandleTypeDef hsdram1;
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
-  .stack_size = 128 * 4,
+  .stack_size = 512 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for TouchGFXTask */
@@ -165,7 +167,12 @@ int main(void)
   /* USER CODE END RTOS_TIMERS */
 
   /* USER CODE BEGIN RTOS_QUEUES */
-  /* add queues, ... */
+  if ((guiToMainMsgQueue = osMessageQueueNew(10, sizeof(guiToMainMsg), NULL)) == NULL)
+	  return -1;
+  if ((mainToGuiMsgQueue = osMessageQueueNew(10, sizeof(displayInfo), NULL)) == NULL)
+	  return -1;
+  if ((dbgMsgQueue = osMessageQueueNew(10, sizeof(char*), NULL)) == NULL)
+	  return -1;
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */

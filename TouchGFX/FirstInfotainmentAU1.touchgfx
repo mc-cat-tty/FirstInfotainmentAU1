@@ -2225,7 +2225,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_2VKQ",
               "UseBuffer": true,
-              "BufferSize": 3
+              "BufferSize": 4
             }
           },
           {

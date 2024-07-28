@@ -85,7 +85,7 @@ protected:
     touchgfx::Unicode::UnicodeChar txtTmotBuffer[TXTTMOT_SIZE];
     static const uint16_t TXTPOIL_SIZE = 5;
     touchgfx::Unicode::UnicodeChar txtPoilBuffer[TXTPOIL_SIZE];
-    static const uint16_t TXTTPS_SIZE = 3;
+    static const uint16_t TXTTPS_SIZE = 4;
     touchgfx::Unicode::UnicodeChar txtTPSBuffer[TXTTPS_SIZE];
     static const uint16_t TXTPBRAKE_SIZE = 4;
     touchgfx::Unicode::UnicodeChar txtPbrakeBuffer[TXTPBRAKE_SIZE];

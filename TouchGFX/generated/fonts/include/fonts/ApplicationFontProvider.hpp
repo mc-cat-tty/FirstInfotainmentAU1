@@ -36,7 +36,7 @@ struct TypographyFontIndex
     static const touchgfx::FontId MED_LARGE = 0;           // verdana_30_4bpp
     static const touchgfx::FontId ENORMOUS = 6;            // verdana_120_4bpp
     static const touchgfx::FontId PRIMARYDRIVERINFO = 7;   // verdana_180_4bpp
-    static const touchgfx::FontId SECONDARYDRIVERINFO = 8; // verdana_57_4bpp
+    static const touchgfx::FontId SECONDARYDRIVERINFO = 8; // verdana_46_4bpp
     static const uint16_t NUMBER_OF_FONTS = 9;
 };
 
