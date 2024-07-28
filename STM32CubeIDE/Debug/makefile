@@ -9,6 +9,14 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include timing/subdir.mk
+-include stm/subdir.mk
+-include spi/subdir.mk
+-include net/subdir.mk
+-include mcp2515/subdir.mk
+-include gpio/subdir.mk
+-include can/subdir.mk
+-include buffer/subdir.mk
 -include Middlewares/FreeRTOS/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/subdir.mk
 -include Drivers/CMSIS/subdir.mk
@@ -88,7 +96,7 @@ main-build: STM32F469I-DISCO-REV-AU1.elf secondary-outputs
 
 # Tool invocations
 STM32F469I-DISCO-REV-AU1.elf STM32F469I-DISCO-REV-AU1.map: $(OBJS) $(USER_OBJS) C:\Users\nuc\Desktop\FirstInfotainmentAU1\STM32CubeIDE\STM32F469NIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "STM32F469I-DISCO-REV-AU1.elf" @"objects.list" $(USER_OBJS) -Wl,--start-group $(LIBS) -Wl,--end-group -mcpu=cortex-m4 -T"C:\Users\nuc\Desktop\FirstInfotainmentAU1\STM32CubeIDE\STM32F469NIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F469I-DISCO-REV-AU1.map" -Wl,--gc-sections -static -LC:/git/STM32F469-dk/stm32f469i_disco/STM32F469I-DISCO-REV-AU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc -L"C:\Users\nuc\Desktop\FirstInfotainmentAU1\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" -LC:/git/stm32f469i_disco/STM32F469I-DISCO-REV-AU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc -LC:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "STM32F469I-DISCO-REV-AU1.elf" @"objects.list" $(USER_OBJS) -Wl,--start-group $(LIBS) -Wl,--end-group -mcpu=cortex-m4 -T"C:\Users\nuc\Desktop\FirstInfotainmentAU1\STM32CubeIDE\STM32F469NIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F469I-DISCO-REV-AU1.map" -Wl,--gc-sections -static -LC:/git/STM32F469-dk/stm32f469i_disco/STM32F469I-DISCO-REV-AU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc -L"C:\Users\nuc\Desktop\FirstInfotainmentAU1\Middlewares\ST\touchgfx\lib\core\cortex_m4f\gcc" -LC:/git/stm32f469i_disco/STM32F469I-DISCO-REV-AU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc -LC:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc -LC:/Users/nuc/Desktop/FirstInfotainmentAU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc -L"C:\Users\nuc\Desktop\FirstInfotainmentAU1\mmr_core\app\lib\buffer" -L"C:\Users\nuc\Desktop\FirstInfotainmentAU1\mmr_core\app\lib\can" -L"C:\Users\nuc\Desktop\FirstInfotainmentAU1\mmr_core\app\lib\filter" -L"C:\Users\nuc\Desktop\FirstInfotainmentAU1\mmr_core\app\lib\gpio" -L"C:\Users\nuc\Desktop\FirstInfotainmentAU1\mmr_core\app\lib\mcp2515" -L"C:\Users\nuc\Desktop\FirstInfotainmentAU1\mmr_core\app\lib\pid" -L"C:\Users\nuc\Desktop\FirstInfotainmentAU1\mmr_core\app\lib\spi" -L"C:\Users\nuc\Desktop\FirstInfotainmentAU1\mmr_core\app\lib\test" -L"C:\Users\nuc\Desktop\FirstInfotainmentAU1\mmr_core\app\lib\timing" -L"C:\Users\nuc\Desktop\FirstInfotainmentAU1\mmr_core\app\lib\util" -L"C:\Users\nuc\Desktop\FirstInfotainmentAU1\mmr_core\app\stm" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -45,10 +45,7 @@ Application/User/gui/StartupPresenter.o: \
  ../../TouchGFX/gui/include/gui/startup_screen/StartupPresenter.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp
 ../../TouchGFX/gui/include/gui/startup_screen/StartupView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/startup_screen/StartupViewBase.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -95,6 +92,3 @@ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h:
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:

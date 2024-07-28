@@ -55,13 +55,13 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../TouchGFX/gui/include/gui/maininfotaiment_screen/MainInfotaimentView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/maininfotaiment_screen/MainInfotaimentViewBase.hpp \
  ../../TouchGFX/gui/include/gui/maininfotaiment_screen/MainInfotaimentPresenter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
@@ -170,13 +170,13 @@ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h:
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 ../../TouchGFX/gui/include/gui/maininfotaiment_screen/MainInfotaimentView.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/maininfotaiment_screen/MainInfotaimentViewBase.hpp:
 ../../TouchGFX/gui/include/gui/maininfotaiment_screen/MainInfotaimentPresenter.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:

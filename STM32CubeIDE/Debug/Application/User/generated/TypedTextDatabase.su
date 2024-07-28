@@ -1,6 +1,6 @@
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:173:43:const touchgfx::TypedText::TypedTextData* TypedTextDatabase::getInstance(touchgfx::LanguageId)	0	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:178:10:uint16_t TypedTextDatabase::getInstanceSize()	0	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:183:24:const touchgfx::Font** TypedTextDatabase::getFonts()	0	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:188:23:const touchgfx::Font* TypedTextDatabase::setFont(touchgfx::FontId, const touchgfx::Font*)	0	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:195:6:void TypedTextDatabase::resetFont(touchgfx::FontId)	8	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:228:1:cpp)	8	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:172:43:const touchgfx::TypedText::TypedTextData* TypedTextDatabase::getInstance(touchgfx::LanguageId)	0	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:177:10:uint16_t TypedTextDatabase::getInstanceSize()	0	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:182:24:const touchgfx::Font** TypedTextDatabase::getFonts()	0	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:187:23:const touchgfx::Font* TypedTextDatabase::setFont(touchgfx::FontId, const touchgfx::Font*)	0	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:194:6:void TypedTextDatabase::resetFont(touchgfx::FontId)	8	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:227:1:cpp)	8	static

@@ -30,6 +30,7 @@ MmrPin* spiSlavePins[] = { &mcp2515csPin };
 MmrLaunchControlState lcState = MMR_LAUNCH_CONTROL_UNKNOWN;
 
 MmrPin lapPin;
+MmrPin sdcCtrlPin;
 MmrDelay delay;
 
 #include <string.h>
@@ -313,6 +314,8 @@ void process_single_can_message(MmrCanMessage* msg) {
     case MMR_CAN_MESSAGE_ID_ECU_BRAKE_PRESSURES:
       msgDisplayInfo.brakePressureFront = (0.005f) * MMR_BUFFER_ReadUint16(msg->payload, 2, MMR_ENCODING_LITTLE_ENDIAN);
       msgDisplayInfo.brakePressureRear = (0.005f) * MMR_BUFFER_ReadUint16(msg->payload, 0, MMR_ENCODING_LITTLE_ENDIAN);
+      uint32_t ecuThrownError = MMR_BUFFER_ReadUint32(msg->payload, 4, MMR_ENCODING_LITTLE_ENDIAN);
+      if (ecuThrownError) MMR_PIN_Write(&sdcCtrlPin, MMR_PIN_LOW);
       break;
 
 
@@ -494,6 +497,9 @@ void configuration() {
   lapPin = MMR_Pin(LAP_COUNTER_TRIGGER_GPIO_Port, LAP_COUNTER_TRIGGER_Pin, false);
   delay = MMR_Delay(1000);
   MMR_PIN_Write(&lapPin, MMR_PIN_HIGH);
+
+  sdcCtrlPin = MMR_Pin(SDC_CTRL_GPIO_Port, SDC_CTRL_Pin, false);
+  MMR_PIN_Write(&sdcCtrlPin, MMR_PIN_HIGH);
 }
 
 

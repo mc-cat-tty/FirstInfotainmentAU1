@@ -10,21 +10,6 @@
             "Width": 800,
             "Height": 480,
             "RelativeFilename": "MMRD_logo_nuovo-800x480.png"
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textArea1",
-            "X": 707,
-            "Width": 94,
-            "Height": 48,
-            "TextId": "__SingleUse_RP6T",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 186,
-              "Green": 182,
-              "Blue": 182
-            },
-            "AutoSize": true
           }
         ],
         "Interactions": [
@@ -2240,7 +2225,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_2VKQ",
               "UseBuffer": true,
-              "BufferSize": 3
+              "BufferSize": 4
             }
           },
           {

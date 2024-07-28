@@ -4,7 +4,6 @@
 #include <gui_generated/startup_screen/StartupViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 
 StartupViewBase::StartupViewBase() :
     fromStartupToInfotaimentCounter(0)
@@ -16,12 +15,6 @@ StartupViewBase::StartupViewBase() :
     backgroundStartup.setXY(0, 0);
     backgroundStartup.setBitmap(touchgfx::Bitmap(BITMAP_MMRD_LOGO_NUOVO_800X480_ID));
     add(backgroundStartup);
-
-    textArea1.setXY(707, 0);
-    textArea1.setColor(touchgfx::Color::getColorFromRGB(186, 182, 182));
-    textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RP6T));
-    add(textArea1);
 }
 
 StartupViewBase::~StartupViewBase()

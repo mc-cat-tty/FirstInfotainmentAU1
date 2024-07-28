@@ -9,7 +9,6 @@
 #include <gui/startup_screen/StartupPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 
 class StartupViewBase : public touchgfx::View<StartupPresenter>
 {
@@ -30,7 +29,6 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Image backgroundStartup;
-    touchgfx::TextArea textArea1;
 
 private:
 

@@ -40,6 +40,9 @@ Application/User/main.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/Core/Src/user_code.c \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
@@ -51,6 +54,33 @@ Application/User/main.o: \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/gpio/inc/pin.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/gpio/inc/button.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/util/inc/util.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/gpio/inc/led.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/timing/inc/delay.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/timing/inc/timing.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/gpio/inc/pin.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/spi/inc/spi.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/mcp2515/inc/mcp2515.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/can/inc/can.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/can/inc/message.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/can/inc/message_id.h \
+ c:\users\nuc\desktop\firstinfotainmentau1\mmr_core\app\lib\util\inc\binary_literals.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/can/inc/header.h \
+ c:\users\nuc\desktop\firstinfotainmentau1\mmr_core\app\lib\util\inc\util.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/can/inc/filter.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/mcp2515/inc/mcp2515_mode.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/mcp2515/inc/mcp2515_error.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/mcp2515/inc/mcp2515_timing.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/stm/inc/spi0.h \
+ c:\users\nuc\desktop\firstinfotainmentau1\mmr_core\app\lib\spi\inc\spi.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/stm/inc/stm_hal_spi_defs.h \
+ c:\users\nuc\desktop\firstinfotainmentau1\mmr_core\app\lib\gpio\inc\pin.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/stm/inc/stm_pin.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/timing/inc/timing.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/core/net/inc/net.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/buffer/buffer.h \
  ../../TouchGFX/App/app_touchgfx.h \
  ../../Drivers/BSP/STM32469I-Discovery/../Components/nt35510/nt35510.h \
  ../../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_sdram.h \
@@ -96,6 +126,9 @@ Application/User/main.o: \
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/Core/Src/user_code.c:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../Core/Inc/FreeRTOSConfig.h:
@@ -107,6 +140,33 @@ Application/User/main.o: \
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/gpio/inc/pin.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/gpio/inc/button.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/util/inc/util.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/gpio/inc/led.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/timing/inc/delay.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/timing/inc/timing.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/gpio/inc/pin.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/spi/inc/spi.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/mcp2515/inc/mcp2515.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/can/inc/can.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/can/inc/message.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/can/inc/message_id.h:
+c:\users\nuc\desktop\firstinfotainmentau1\mmr_core\app\lib\util\inc\binary_literals.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/can/inc/header.h:
+c:\users\nuc\desktop\firstinfotainmentau1\mmr_core\app\lib\util\inc\util.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/can/inc/filter.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/mcp2515/inc/mcp2515_mode.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/mcp2515/inc/mcp2515_error.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/mcp2515/inc/mcp2515_timing.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/stm/inc/spi0.h:
+c:\users\nuc\desktop\firstinfotainmentau1\mmr_core\app\lib\spi\inc\spi.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/stm/inc/stm_hal_spi_defs.h:
+c:\users\nuc\desktop\firstinfotainmentau1\mmr_core\app\lib\gpio\inc\pin.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/stm/inc/stm_pin.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/timing/inc/timing.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/core/net/inc/net.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/lib/buffer/buffer.h:
 ../../TouchGFX/App/app_touchgfx.h:
 ../../Drivers/BSP/STM32469I-Discovery/../Components/nt35510/nt35510.h:
 ../../Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_sdram.h:
