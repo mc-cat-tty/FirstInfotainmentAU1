@@ -69,6 +69,17 @@
 									<listOptionValue builtIn="false" value="../../TouchGFX/generated/texts/include"/>
 									<listOptionValue builtIn="false" value="../../TouchGFX/gui/include"/>
 									<listOptionValue builtIn="false" value="../../TouchGFX/generated/videos/include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/core/net/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/gpio/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mmr_core/app/lib/util/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/timing/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/spi/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/mcp2515/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mmr_core/app/lib/can/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/buffer}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/filter/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mmr_core/app/lib/gpio/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/mmr_core/app/stm/inc}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1036047372" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -129,11 +140,24 @@
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.option.directories.0446552423" name="Library search path (-L)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.option.directories" useByScannerDiscovery="false" valueType="libPaths">
 									<listOptionValue builtIn="false" value="C:/git/STM32F469-dk/stm32f469i_disco/STM32F469I-DISCO-REV-AU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/Core/Src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc}&quot;"/>
 									<listOptionValue builtIn="false" value="C:/git/stm32f469i_disco/STM32F469I-DISCO-REV-AU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc"/>
 									<listOptionValue builtIn="false" value="C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc"/>
+									<listOptionValue builtIn="false" value="C:/Users/nuc/Desktop/FirstInfotainmentAU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/buffer}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/can}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/filter}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/gpio}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/mcp2515}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/pid}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/spi}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/test}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/timing}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/lib/util}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/FirstInfotainmentAU1/mmr_core/app/stm}&quot;"/>
 								</option>
-								<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.option.uselinkergroup.1978229796" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.option.uselinkergroup" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.option.uselinkergroup.1978229796" name="Place libraries in a linker group (-Wl,--start-group $(LIBS) -Wl,--end-group)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.option.uselinkergroup" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.input.1690517566" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -149,6 +173,10 @@
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.765135988" name="MCU Output Converter Motorola S-rec with symbols" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec"/>
 						</toolChain>
 					</folderInfo>
+					<sourceEntries>
+						<entry excluding="Src" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -266,6 +294,7 @@
 									<listOptionValue builtIn="false" value="C:/git/STM32F469-dk/stm32f469i_disco/STM32F469I-DISCO-REV-AU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc"/>
 									<listOptionValue builtIn="false" value="C:/git/stm32f469i_disco/STM32F469I-DISCO-REV-AU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc"/>
 									<listOptionValue builtIn="false" value="C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc"/>
+									<listOptionValue builtIn="false" value="C:/Users/nuc/Desktop/FirstInfotainmentAU1/Middlewares/ST/touchgfx/lib/core/cortex_m4f/gcc"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.input.129321398" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>

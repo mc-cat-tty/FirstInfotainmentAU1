@@ -16,16 +16,13 @@ Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	1
 Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
 Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
-TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	1
 View.hpp:36:7:touchgfx::View<StartupPresenter>::~View()	1
-StartupViewBase.cpp:27:1:StartupViewBase::~StartupViewBase()	1
-StartupViewBase.cpp:32:6:virtual void StartupViewBase::setupScreen()	1
-StartupViewBase.cpp:37:6:virtual void StartupViewBase::afterTransition()	1
-TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
+StartupViewBase.cpp:20:1:StartupViewBase::~StartupViewBase()	1
+StartupViewBase.cpp:25:6:virtual void StartupViewBase::setupScreen()	1
+StartupViewBase.cpp:30:6:virtual void StartupViewBase::afterTransition()	1
 View.hpp:36:7:virtual touchgfx::View<StartupPresenter>::~View()	1
-StartupViewBase.cpp:27:1:virtual StartupViewBase::~StartupViewBase()	1
+StartupViewBase.cpp:20:1:virtual StartupViewBase::~StartupViewBase()	1
 Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
-StartupViewBase.cpp:45:6:virtual void StartupViewBase::handleTickEvent()	3
+StartupViewBase.cpp:38:6:virtual void StartupViewBase::handleTickEvent()	3
 Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
-Widget.hpp:36:7:touchgfx::Widget::Widget()	1
-StartupViewBase.cpp:9:1:StartupViewBase::StartupViewBase()	1
+StartupViewBase.cpp:8:1:StartupViewBase::StartupViewBase()	1

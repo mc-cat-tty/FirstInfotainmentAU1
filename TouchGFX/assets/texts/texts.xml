@@ -315,9 +315,6 @@
       <Text Id="__SingleUse_J87C" Alignment="Center" TypographyId="little_medium">
         <Translation Language="GB">&lt;value&gt; V</Translation>
       </Text>
-      <Text Id="__SingleUse_RP6T" Alignment="Left" TypographyId="Small">
-        <Translation Language="GB">Special Thanks to:&#10;Fattore G,&#10;Fattore B,&#10;Fattore M</Translation>
-      </Text>
       <Text Id="__SingleUse_V415" Alignment="Left" TypographyId="Medium">
         <Translation Language="GB">Off</Translation>
       </Text>

@@ -40,6 +40,11 @@
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/STM32F469I-DISCO-REV-AU1.ioc</locationURI>
 		</link>
 		<link>
+			<name>Src</name>
+			<type>2</type>
+			<location>C:/Users/nuc/Desktop/FirstInfotainmentAU1/Core/Src</location>
+		</link>
+		<link>
 			<name>Application/User/freertos.c</name>
 			<type>1</type>
 			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/Core/Src/freertos.c</locationURI>
