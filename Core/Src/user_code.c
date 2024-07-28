@@ -29,6 +29,9 @@ MmrPin* spiSlavePins[] = { &mcp2515csPin };
 
 MmrLaunchControlState lcState = MMR_LAUNCH_CONTROL_UNKNOWN;
 
+MmrPin lapPin;
+MmrDelay delay;
+
 #include <string.h>
 void userMessage(const char* msg) {
   osMessageQueuePut(dbgMsgQueue, &msg, 0U, 0U);
@@ -428,6 +431,22 @@ void task_resetchassis() {
   }
 }
 
+void task_mock_lap_trigger() {
+	static uint32_t count = 0;
+
+	if (MMR_DELAY_WaitAsync(&delay)) {
+		count++;
+		if (count % 3 == 0) MMR_PIN_Write(&lapPin, MMR_PIN_LOW);
+		if (count % 4 == 0) {
+			MMR_PIN_Write(&lapPin, MMR_PIN_HIGH);
+			count = 0;
+		}
+	}
+
+}
+
+
+
 void configuration() {
   // Initialize the MMR libraries
   userMessage("INFO: Initialization...");
@@ -471,6 +490,10 @@ void configuration() {
 
     osDelay(200);
   }
+
+  lapPin = MMR_Pin(LAP_COUNTER_TRIGGER_GPIO_Port, LAP_COUNTER_TRIGGER_Pin, false);
+  delay = MMR_Delay(1000);
+  MMR_PIN_Write(&lapPin, MMR_PIN_HIGH);
 }
 
 
@@ -489,5 +512,6 @@ void userDefaultTask() {
     task_send_missionrequest();
     task_send_resopmode();
     task_resetchassis();
+    task_mock_lap_trigger();
   }
 }

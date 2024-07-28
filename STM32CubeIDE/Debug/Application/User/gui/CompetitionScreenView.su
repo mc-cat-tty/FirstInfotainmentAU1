@@ -1,9 +1,9 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/gui/src/competitionscreen_screen/CompetitionScreenView.cpp:10:6:virtual void CompetitionScreenView::tearDownScreen()	0	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/competitionscreen_screen/CompetitionScreenView.cpp:10:6:virtual void CompetitionScreenView::tearDownScreen()	0	static
 ../../TouchGFX/gui/include/gui/competitionscreen_screen/CompetitionScreenView.hpp:11:13:CompetitionScreenView::~CompetitionScreenView()	8	static
 ../../TouchGFX/gui/include/gui/competitionscreen_screen/CompetitionScreenView.hpp:11:13:virtual CompetitionScreenView::~CompetitionScreenView()	8	static
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/gui/src/competitionscreen_screen/CompetitionScreenView.cpp:3:1:CompetitionScreenView::CompetitionScreenView()	8	static
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/gui/src/competitionscreen_screen/CompetitionScreenView.cpp:5:6:virtual void CompetitionScreenView::setupScreen()	0	static
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/gui/src/competitionscreen_screen/CompetitionScreenView.cpp:15:6:void CompetitionScreenView::setMission(const char*)	8	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/competitionscreen_screen/CompetitionScreenView.cpp:3:1:CompetitionScreenView::CompetitionScreenView()	8	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/competitionscreen_screen/CompetitionScreenView.cpp:5:6:virtual void CompetitionScreenView::setupScreen()	0	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/competitionscreen_screen/CompetitionScreenView.cpp:15:6:void CompetitionScreenView::setMission(const char*)	8	static

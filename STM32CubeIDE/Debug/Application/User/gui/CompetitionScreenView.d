@@ -1,5 +1,5 @@
 Application/User/gui/CompetitionScreenView.o: \
- C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/gui/src/competitionscreen_screen/CompetitionScreenView.cpp \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/competitionscreen_screen/CompetitionScreenView.cpp \
  ../../TouchGFX/gui/include/gui/competitionscreen_screen/CompetitionScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/competitionscreen_screen/CompetitionScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
@@ -39,8 +39,8 @@ Application/User/gui/CompetitionScreenView.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
- C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h \
- C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../../TouchGFX/gui/include/gui/competitionscreen_screen/CompetitionScreenPresenter.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -90,8 +90,8 @@ Application/User/gui/CompetitionScreenView.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h:
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../../TouchGFX/gui/include/gui/competitionscreen_screen/CompetitionScreenPresenter.hpp:
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:

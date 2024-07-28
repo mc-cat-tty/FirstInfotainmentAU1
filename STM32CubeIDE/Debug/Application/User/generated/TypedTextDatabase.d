@@ -1,5 +1,5 @@
 Application/User/generated/TypedTextDatabase.o: \
- C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \

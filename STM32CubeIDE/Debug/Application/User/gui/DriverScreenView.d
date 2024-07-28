@@ -1,5 +1,5 @@
 Application/User/gui/DriverScreenView.o: \
- C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp \
  ../../TouchGFX/gui/include/gui/driverscreen_screen/DriverScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/driverscreen_screen/DriverScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
@@ -39,8 +39,8 @@ Application/User/gui/DriverScreenView.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
- C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h \
- C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../../TouchGFX/gui/include/gui/driverscreen_screen/DriverScreenPresenter.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -92,8 +92,8 @@ Application/User/gui/DriverScreenView.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h:
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../../TouchGFX/gui/include/gui/driverscreen_screen/DriverScreenPresenter.hpp:
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:

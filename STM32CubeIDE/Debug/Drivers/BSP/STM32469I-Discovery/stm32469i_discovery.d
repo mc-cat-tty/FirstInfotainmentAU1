@@ -1,6 +1,6 @@
 Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.o: \
- C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.c \
- C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.c \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -35,11 +35,12 @@ Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../../Core/Inc/stm32f4xx_hal_conf.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
@@ -74,6 +75,7 @@ C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Drivers/B
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h:

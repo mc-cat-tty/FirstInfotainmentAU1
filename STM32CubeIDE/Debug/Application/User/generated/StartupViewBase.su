@@ -18,14 +18,14 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<StartupPresenter>::~View()	0	static
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/generated/gui_generated/src/startup_screen/StartupViewBase.cpp:27:1:StartupViewBase::~StartupViewBase()	0	static
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/generated/gui_generated/src/startup_screen/StartupViewBase.cpp:32:6:virtual void StartupViewBase::setupScreen()	0	static
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/generated/gui_generated/src/startup_screen/StartupViewBase.cpp:37:6:virtual void StartupViewBase::afterTransition()	0	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/gui_generated/src/startup_screen/StartupViewBase.cpp:27:1:StartupViewBase::~StartupViewBase()	0	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/gui_generated/src/startup_screen/StartupViewBase.cpp:32:6:virtual void StartupViewBase::setupScreen()	0	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/gui_generated/src/startup_screen/StartupViewBase.cpp:37:6:virtual void StartupViewBase::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<StartupPresenter>::~View()	8	static
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/generated/gui_generated/src/startup_screen/StartupViewBase.cpp:27:1:virtual StartupViewBase::~StartupViewBase()	8	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/gui_generated/src/startup_screen/StartupViewBase.cpp:27:1:virtual StartupViewBase::~StartupViewBase()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/generated/gui_generated/src/startup_screen/StartupViewBase.cpp:45:6:virtual void StartupViewBase::handleTickEvent()	8	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/gui_generated/src/startup_screen/StartupViewBase.cpp:45:6:virtual void StartupViewBase::handleTickEvent()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	0	static
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/TouchGFX/generated/gui_generated/src/startup_screen/StartupViewBase.cpp:9:1:StartupViewBase::StartupViewBase()	56	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/gui_generated/src/startup_screen/StartupViewBase.cpp:9:1:StartupViewBase::StartupViewBase()	56	static

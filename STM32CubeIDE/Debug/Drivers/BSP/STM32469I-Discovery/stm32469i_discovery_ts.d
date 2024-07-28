@@ -1,7 +1,7 @@
 Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.o: \
- C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.c \
- C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.h \
- C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.c \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.h \
+ C:/Users/nuc/Desktop/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -36,14 +36,15 @@ Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h \
- c:\users\francesco\downloads\firstinfotainmentau1\firstinfotainmentau1\drivers\bsp\components\ft6x06\ft6x06.h \
- c:\users\francesco\downloads\firstinfotainmentau1\firstinfotainmentau1\drivers\bsp\components\common\ts.h
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.h:
-C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h:
+ c:\users\nuc\desktop\firstinfotainmentau1\drivers\bsp\components\ft6x06\ft6x06.h \
+ c:\users\nuc\desktop\firstinfotainmentau1\drivers\bsp\components\common\ts.h
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery_ts.h:
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/Drivers/BSP/STM32469I-Discovery/stm32469i_discovery.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../../Core/Inc/stm32f4xx_hal_conf.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
@@ -78,9 +79,10 @@ C:/Users/Francesco/Downloads/FirstInfotainmentAU1/FirstInfotainmentAU1/Drivers/B
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dsi.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_qspi.h:
-c:\users\francesco\downloads\firstinfotainmentau1\firstinfotainmentau1\drivers\bsp\components\ft6x06\ft6x06.h:
-c:\users\francesco\downloads\firstinfotainmentau1\firstinfotainmentau1\drivers\bsp\components\common\ts.h:
+c:\users\nuc\desktop\firstinfotainmentau1\drivers\bsp\components\ft6x06\ft6x06.h:
+c:\users\nuc\desktop\firstinfotainmentau1\drivers\bsp\components\common\ts.h:
