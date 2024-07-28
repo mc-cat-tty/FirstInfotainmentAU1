@@ -75,8 +75,8 @@ void Model::tick()
 		setOrinTemperature(info.orinTemperature);
 		setVoltage24v(info.voltage24v);
 
-		setRearBrakePerc(info.brakePressureRear * (100.0 / 160.0));
-		setFrontBrakePerc(info.brakePressureFront * (100.0 / 160.0));
+		setRearBrakePerc(info.brakePressureRear);
+		setFrontBrakePerc(info.brakePressureFront);
 		setLap(info.lap);
 		setP_Fuel(info.P_fuel);
 
