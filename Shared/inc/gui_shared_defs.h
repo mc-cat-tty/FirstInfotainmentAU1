@@ -21,6 +21,7 @@ typedef struct {
 	float brakePressureRear;
 	float voltage24v;
 	float orinTemperature;
+	float steeringAngle;
 	float P_fuel;
 	int lap;
 	/* TODO: String variables */

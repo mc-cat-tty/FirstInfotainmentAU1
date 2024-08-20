@@ -56,7 +56,7 @@ protected:
     touchgfx::TextArea labelCLT;
     touchgfx::TextArea labelTmot;
     touchgfx::TextArea labelToil;
-    touchgfx::TextArea labelTorin;
+    touchgfx::TextArea labelSteeringAngle;
     touchgfx::TextArea labelBat12;
     touchgfx::TextArea labelTorin_1_1;
     touchgfx::TextArea labelPoil;
@@ -70,7 +70,7 @@ protected:
     touchgfx::TextAreaWithOneWildcard txtPfuel;
     touchgfx::TextAreaWithOneWildcard txtBat12;
     touchgfx::TextAreaWithOneWildcard txtToil;
-    touchgfx::TextAreaWithOneWildcard txtSteerAngle;
+    touchgfx::TextAreaWithOneWildcard txtSteeringAngle;
     touchgfx::TextAreaWithOneWildcard txtLap;
     touchgfx::TextAreaWithOneWildcard txtSpeed;
 
@@ -97,8 +97,8 @@ protected:
     touchgfx::Unicode::UnicodeChar txtBat12Buffer[TXTBAT12_SIZE];
     static const uint16_t TXTTOIL_SIZE = 4;
     touchgfx::Unicode::UnicodeChar txtToilBuffer[TXTTOIL_SIZE];
-    static const uint16_t TXTSTEERANGLE_SIZE = 4;
-    touchgfx::Unicode::UnicodeChar txtSteerAngleBuffer[TXTSTEERANGLE_SIZE];
+    static const uint16_t TXTSTEERINGANGLE_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar txtSteeringAngleBuffer[TXTSTEERINGANGLE_SIZE];
     static const uint16_t TXTLAP_SIZE = 3;
     touchgfx::Unicode::UnicodeChar txtLapBuffer[TXTLAP_SIZE];
     static const uint16_t TXTSPEED_SIZE = 8;

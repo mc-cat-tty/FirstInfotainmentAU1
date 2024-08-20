@@ -29,6 +29,7 @@ void Model::tick() {
   setP_oil((float)(t % 999) / 100);
   setT_oil(t % 200);
   setT_water(t % 300);
+  setSteeringAngle(((t % 1999)-999) / 10.f);
   setGear(t % 6);
   setSpeed(t % 150);
   setRES(t % 4);
@@ -74,6 +75,8 @@ void Model::tick()
 
 		setOrinTemperature(info.orinTemperature);
 		setVoltage24v(info.voltage24v);
+
+		setSteeringAngle(info.steeringAngle);
 
 		setRearBrakePerc(info.brakePressureRear);
 		setFrontBrakePerc(info.brakePressureFront);

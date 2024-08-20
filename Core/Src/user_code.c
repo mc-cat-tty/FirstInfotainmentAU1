@@ -31,7 +31,6 @@ MmrLaunchControlState lcState = MMR_LAUNCH_CONTROL_UNKNOWN;
 
 MmrPin lapPin;
 MmrPin sdcCtrlPin;
-MmrDelay delay;
 
 #include <string.h>
 void userMessage(const char* msg) {
@@ -337,10 +336,10 @@ void process_single_can_message(MmrCanMessage* msg) {
       lcState = lc ? MMR_LAUNCH_CONTROL_SET : MMR_LAUNCH_CONTROL_NOT_SET;
       break;
 
-    /* ORIN TEMPERATURE */
-    case MMR_CAN_MESSAGE_ID_ORIN_TEMPERATURE:
-      msgDisplayInfo.orinTemperature = MMR_BUFFER_ReadFloat(msg->payload, 0, MMR_ENCODING_LITTLE_ENDIAN);
-      break;
+    /* STEER and WHEEL POT FEEDBACK */
+    case MMR_CAN_MESSAGE_ID_ECU_LAMBDA:
+      msgDisplayInfo.steeringAngle = MMR_BUFFER_ReadInt16(msg->payload, 4, MMR_ENCODING_LITTLE_ENDIAN) / 10.0f;
+	  break;
 
     /* 24V */
     case MMR_CAN_MESSAGE_ID_24v:
@@ -432,18 +431,22 @@ void task_resetchassis() {
   }
 }
 
-void task_mock_lap_trigger() {
-	static uint32_t count = 0;
+void task_lap_trigger() {
+	static uint16_t prevLap = 0;
+	static MmrDelay lowTime = {
+		.ms = 500,
+		.start = 0,
+	};
 
-	if (MMR_DELAY_WaitAsync(&delay)) {
-		count++;
-		if (count % 3 == 0) MMR_PIN_Write(&lapPin, MMR_PIN_LOW);
-		if (count % 4 == 0) {
-			MMR_PIN_Write(&lapPin, MMR_PIN_HIGH);
-			count = 0;
-		}
+	if (prevLap != msgDisplayInfo.lap) {
+		prevLap = msgDisplayInfo.lap;
+		MMR_PIN_Write(&lapPin, MMR_PIN_LOW);
+		MMR_DELAY_Reset(&lowTime);
 	}
 
+	if (MMR_DELAY_WaitAsync(&lowTime)) {
+		MMR_PIN_Write(&lapPin, MMR_PIN_HIGH);
+	}
 }
 
 
@@ -493,7 +496,6 @@ void configuration() {
   }
 
   lapPin = MMR_Pin(LAP_COUNTER_TRIGGER_GPIO_Port, LAP_COUNTER_TRIGGER_Pin, false);
-  delay = MMR_Delay(1000);
   MMR_PIN_Write(&lapPin, MMR_PIN_HIGH);
 
   sdcCtrlPin = MMR_Pin(SDC_CTRL_GPIO_Port, SDC_CTRL_Pin, false);
@@ -516,6 +518,6 @@ void userDefaultTask() {
     task_send_missionrequest();
     task_send_resopmode();
     task_resetchassis();
-    task_mock_lap_trigger();
+    task_lap_trigger();
   }
 }

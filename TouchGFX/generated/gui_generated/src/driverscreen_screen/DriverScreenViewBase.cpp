@@ -179,11 +179,11 @@ DriverScreenViewBase::DriverScreenViewBase() :
     labelToil.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2Q01));
     add(labelToil);
 
-    labelTorin.setPosition(134, 367, 133, 37);
-    labelTorin.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    labelTorin.setLinespacing(0);
-    labelTorin.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8VFR));
-    add(labelTorin);
+    labelSteeringAngle.setPosition(134, 367, 133, 37);
+    labelSteeringAngle.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    labelSteeringAngle.setLinespacing(0);
+    labelSteeringAngle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_8VFR));
+    add(labelSteeringAngle);
 
     labelBat12.setPosition(268, 370, 130, 37);
     labelBat12.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -277,13 +277,13 @@ DriverScreenViewBase::DriverScreenViewBase() :
     txtToil.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BID7));
     add(txtToil);
 
-    txtSteerAngle.setPosition(134, 404, 133, 76);
-    txtSteerAngle.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    txtSteerAngle.setLinespacing(0);
-    Unicode::snprintf(txtSteerAngleBuffer, TXTSTEERANGLE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_IM6N).getText());
-    txtSteerAngle.setWildcard(txtSteerAngleBuffer);
-    txtSteerAngle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T9US));
-    add(txtSteerAngle);
+    txtSteeringAngle.setPosition(134, 404, 133, 76);
+    txtSteeringAngle.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    txtSteeringAngle.setLinespacing(0);
+    Unicode::snprintf(txtSteeringAngleBuffer, TXTSTEERINGANGLE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_IM6N).getText());
+    txtSteeringAngle.setWildcard(txtSteeringAngleBuffer);
+    txtSteeringAngle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T9US));
+    add(txtSteeringAngle);
 
     txtLap.setPosition(267, 24, 264, 72);
     txtLap.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));

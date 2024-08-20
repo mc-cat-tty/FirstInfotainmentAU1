@@ -50,7 +50,7 @@
             "X": 363,
             "Y": 40,
             "Width": 75,
-            "Height": 122,
+            "Height": 121,
             "TextId": "__SingleUse_8VH0",
             "TextRotation": "0",
             "Color": {
@@ -2085,7 +2085,7 @@
           },
           {
             "Type": "TextArea",
-            "Name": "labelTorin",
+            "Name": "labelSteeringAngle",
             "X": 134,
             "Y": 367,
             "Width": 133,
@@ -2330,7 +2330,7 @@
           },
           {
             "Type": "TextArea",
-            "Name": "txtSteerAngle",
+            "Name": "txtSteeringAngle",
             "X": 134,
             "Y": 404,
             "Width": 133,
@@ -2345,7 +2345,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_IM6N",
               "UseBuffer": true,
-              "BufferSize": 4
+              "BufferSize": 6
             }
           },
           {

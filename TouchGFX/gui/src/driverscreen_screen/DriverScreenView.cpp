@@ -98,9 +98,9 @@ void DriverScreenView::setToil(int oilTemp) {
     txtToil.invalidate();
 }
 
-void DriverScreenView::setTorin(int orinTemp) {
-    Unicode::snprintf(txtTorinBuffer, TXTTORIN_SIZE, "%d", orinTemp);
-    txtTorin.invalidate();
+void DriverScreenView::setSteeringAngle(float steeringAngle) {
+    Unicode::snprintfFloat(txtSteeringAngleBuffer, TXTSTEERINGANGLE_SIZE, "%.1f", steeringAngle);
+    txtSteeringAngle.invalidate();
 }
 
 void DriverScreenView::setPoil(float oilPressure) {

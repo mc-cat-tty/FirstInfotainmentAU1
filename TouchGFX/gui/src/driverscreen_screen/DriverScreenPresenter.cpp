@@ -35,7 +35,7 @@ void DriverScreenPresenter::infoChanged() {
 
 	view.setTmot(model->getT_water());
 	view.setToil(model->getT_oil());
-	view.setTorin(model->getOrinTemperature());
+	view.setSteeringAngle(model->getSteeringAngle());
 
 	view.setPoil(model->getP_oil());
 	view.setPfuel(model->getP_fuel());

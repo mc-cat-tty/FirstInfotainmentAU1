@@ -15,7 +15,7 @@ DriverScreenView.cpp:62:6:void DriverScreenView::setLC(bool)	2
 DriverScreenView.cpp:76:6:void DriverScreenView::setCLT(bool)	2
 DriverScreenView.cpp:91:6:void DriverScreenView::setTmot(int)	1
 DriverScreenView.cpp:96:6:void DriverScreenView::setToil(int)	1
-DriverScreenView.cpp:101:6:void DriverScreenView::setTorin(int)	1
+DriverScreenView.cpp:101:6:void DriverScreenView::setSteeringAngle(float)	1
 DriverScreenView.cpp:106:6:void DriverScreenView::setPoil(float)	1
 DriverScreenView.cpp:111:6:void DriverScreenView::setPfuel(float)	1
 DriverScreenView.cpp:116:6:void DriverScreenView::setPbrake(int)	1

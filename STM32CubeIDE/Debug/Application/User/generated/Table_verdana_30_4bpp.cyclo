@@ -1,2 +1,2 @@
-Table_verdana_30_4bpp.cpp:88:168:void __tcf_0()	1
-Table_verdana_30_4bpp.cpp:86:26:touchgfx::GeneratedFont& getFont_verdana_30_4bpp()	3
+Table_verdana_30_4bpp.cpp:89:168:void __tcf_0()	1
+Table_verdana_30_4bpp.cpp:87:26:touchgfx::GeneratedFont& getFont_verdana_30_4bpp()	3

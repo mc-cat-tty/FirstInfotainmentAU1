@@ -36,6 +36,9 @@ public:
     void setOrinTemperature(float recvOrinTemperature) { orinTemperature = recvOrinTemperature; }
     float getOrinTemperature() { return orinTemperature; }
 
+    void setSteeringAngle(float recSteeringAngle) { steeringAngle = recSteeringAngle; }
+    float getSteeringAngle() { return steeringAngle; }
+
     void setVoltage24v(float recvVoltage24v) { voltage24v = recvVoltage24v; }
     float getVoltage24v() { return voltage24v; }
 
@@ -95,7 +98,7 @@ protected:
 
     int lap;
 
-    float orinTemperature;
+    float orinTemperature, steeringAngle;
 
     float P_oil, P_fuel;
 

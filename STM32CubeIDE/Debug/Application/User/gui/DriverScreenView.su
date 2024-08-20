@@ -15,7 +15,7 @@ C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/driverscreen_screen/D
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:76:6:void DriverScreenView::setCLT(bool)	8	static
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:91:6:void DriverScreenView::setTmot(int)	8	static
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:96:6:void DriverScreenView::setToil(int)	8	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:101:6:void DriverScreenView::setTorin(int)	8	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:101:6:void DriverScreenView::setSteeringAngle(float)	16	static
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:106:6:void DriverScreenView::setPoil(float)	16	static
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:111:6:void DriverScreenView::setPfuel(float)	16	static
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/driverscreen_screen/DriverScreenView.cpp:116:6:void DriverScreenView::setPbrake(int)	8	static

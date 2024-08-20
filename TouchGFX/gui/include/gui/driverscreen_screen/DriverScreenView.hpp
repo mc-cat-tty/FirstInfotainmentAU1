@@ -26,6 +26,8 @@ public:
 	void setToil(int oilTemp);
 	void setTorin(int orinTemp);
 
+	void setSteeringAngle(float steeringAngle);
+
 	void setPoil(float oilPressure);
 	void setPfuel(float fuelPressure);
 	void setPbrake(int brakePressure);
