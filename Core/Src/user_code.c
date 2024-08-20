@@ -332,7 +332,7 @@ void process_single_can_message(MmrCanMessage* msg) {
     /* Both Piggybacked by the same message of NTRL ACK */
     case MMR_CAN_MESSAGE_ID_ECU_GEAR_NTRL_ACK:
       msgDisplayInfo.CLT = MMR_BUFFER_ReadBool(msg->payload, 2); /* No need to read RxData[7] since it will ALWAYS be 0! */
-      bool lc = MMR_BUFFER_ReadBool(msg->payload, 1);
+      bool lc = MMR_BUFFER_ReadBool(msg->payload, 0);
       msgDisplayInfo.LC = lc;
       lcState = lc ? MMR_LAUNCH_CONTROL_SET : MMR_LAUNCH_CONTROL_NOT_SET;
       break;
