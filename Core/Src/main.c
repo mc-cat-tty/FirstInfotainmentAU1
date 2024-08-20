@@ -735,7 +735,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : STEERING_RIGHT_RED_BUTTON_Pin */
   GPIO_InitStruct.Pin = STEERING_RIGHT_RED_BUTTON_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(STEERING_RIGHT_RED_BUTTON_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : MCU_ACTIVE_Pin */
@@ -776,7 +776,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : STEERING_LEFT_RED_BUTTON_Pin STEERING_RIGHT_PADDLE_BUTTON_Pin */
   GPIO_InitStruct.Pin = STEERING_LEFT_RED_BUTTON_Pin|STEERING_RIGHT_PADDLE_BUTTON_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : DASHBOARD_NEUTRAL_LED_Pin */
@@ -796,7 +796,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : STEERING_GREEN_BUTTON_Pin */
   GPIO_InitStruct.Pin = STEERING_GREEN_BUTTON_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(STEERING_GREEN_BUTTON_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : MCP2515_CS_Pin */
@@ -809,7 +809,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : STEERING_LEFT_PADDLE_BUTTON_Pin */
   GPIO_InitStruct.Pin = STEERING_LEFT_PADDLE_BUTTON_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(STEERING_LEFT_PADDLE_BUTTON_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */

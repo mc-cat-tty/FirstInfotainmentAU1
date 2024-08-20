@@ -311,6 +311,7 @@ void process_single_can_message(MmrCanMessage* msg) {
     }
 
     /* Brake pressure */
+    // This message also carries the ATH and APPS errors in the last two MSB byes
     case MMR_CAN_MESSAGE_ID_ECU_BRAKE_PRESSURES:
       msgDisplayInfo.brakePressureFront = (0.005f) * MMR_BUFFER_ReadUint16(msg->payload, 2, MMR_ENCODING_LITTLE_ENDIAN);
       msgDisplayInfo.brakePressureRear = (0.005f) * MMR_BUFFER_ReadUint16(msg->payload, 0, MMR_ENCODING_LITTLE_ENDIAN);
@@ -326,17 +327,14 @@ void process_single_can_message(MmrCanMessage* msg) {
       break;
     }
 
-    /* LAUNCH CONTROL ACTIVE */
-    case 0x70C: {
-      bool lc = msg->payload[0] & 0x1;
+    /* LAUNCH CONTROL FEEDBACK */
+    /* CLUTCH PULL FEEDBACK. */
+    /* Both Piggybacked by the same message of NTRL ACK */
+    case MMR_CAN_MESSAGE_ID_ECU_GEAR_NTRL_ACK:
+      msgDisplayInfo.CLT = MMR_BUFFER_ReadBool(msg->payload, 2); /* No need to read RxData[7] since it will ALWAYS be 0! */
+      bool lc = MMR_BUFFER_ReadBool(msg->payload, 1);
       msgDisplayInfo.LC = lc;
-      lcState = lc? MMR_LAUNCH_CONTROL_SET : MMR_LAUNCH_CONTROL_NOT_SET;
-      break;
-    }
-
-    /* CLUTCH PULL OK */
-    case MMR_CAN_MESSAGE_ID_CS_CLUTCH_PULL_OK:
-      msgDisplayInfo.CLT = true; /* No need to read RxData[7] since it will ALWAYS be 0! */
+      lcState = lc ? MMR_LAUNCH_CONTROL_SET : MMR_LAUNCH_CONTROL_NOT_SET;
       break;
 
     /* ORIN TEMPERATURE */
