@@ -94,7 +94,7 @@
         <Translation Language="GB">Bat 12</Translation>
       </Text>
       <Text Id="__SingleUse_8VFR" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">T Orin</Translation>
+        <Translation Language="GB">Steer</Translation>
       </Text>
       <Text Id="__SingleUse_2Q01" Alignment="Center" TypographyId="Large">
         <Translation Language="GB">T Oil</Translation>
@@ -142,7 +142,7 @@
         <Translation Language="GB">100</Translation>
       </Text>
       <Text Id="__SingleUse_T9US" Alignment="Center" TypographyId="SecondaryDriverInfo">
-        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="GB">&lt;value&gt;°</Translation>
       </Text>
       <Text Id="__SingleUse_CUPH" Alignment="Left" TypographyId="SecondaryDriverInfo">
         <Translation Language="GB">100</Translation>

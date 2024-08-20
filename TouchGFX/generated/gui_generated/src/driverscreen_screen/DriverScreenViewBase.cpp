@@ -277,13 +277,13 @@ DriverScreenViewBase::DriverScreenViewBase() :
     txtToil.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BID7));
     add(txtToil);
 
-    txtTorin.setPosition(134, 404, 133, 76);
-    txtTorin.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    txtTorin.setLinespacing(0);
-    Unicode::snprintf(txtTorinBuffer, TXTTORIN_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_IM6N).getText());
-    txtTorin.setWildcard(txtTorinBuffer);
-    txtTorin.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T9US));
-    add(txtTorin);
+    txtSteerAngle.setPosition(134, 404, 133, 76);
+    txtSteerAngle.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    txtSteerAngle.setLinespacing(0);
+    Unicode::snprintf(txtSteerAngleBuffer, TXTSTEERANGLE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_IM6N).getText());
+    txtSteerAngle.setWildcard(txtSteerAngleBuffer);
+    txtSteerAngle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T9US));
+    add(txtSteerAngle);
 
     txtLap.setPosition(267, 24, 264, 72);
     txtLap.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));

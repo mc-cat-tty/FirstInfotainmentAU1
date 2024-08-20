@@ -70,7 +70,7 @@ protected:
     touchgfx::TextAreaWithOneWildcard txtPfuel;
     touchgfx::TextAreaWithOneWildcard txtBat12;
     touchgfx::TextAreaWithOneWildcard txtToil;
-    touchgfx::TextAreaWithOneWildcard txtTorin;
+    touchgfx::TextAreaWithOneWildcard txtSteerAngle;
     touchgfx::TextAreaWithOneWildcard txtLap;
     touchgfx::TextAreaWithOneWildcard txtSpeed;
 
@@ -97,8 +97,8 @@ protected:
     touchgfx::Unicode::UnicodeChar txtBat12Buffer[TXTBAT12_SIZE];
     static const uint16_t TXTTOIL_SIZE = 4;
     touchgfx::Unicode::UnicodeChar txtToilBuffer[TXTTOIL_SIZE];
-    static const uint16_t TXTTORIN_SIZE = 4;
-    touchgfx::Unicode::UnicodeChar txtTorinBuffer[TXTTORIN_SIZE];
+    static const uint16_t TXTSTEERANGLE_SIZE = 4;
+    touchgfx::Unicode::UnicodeChar txtSteerAngleBuffer[TXTSTEERANGLE_SIZE];
     static const uint16_t TXTLAP_SIZE = 3;
     touchgfx::Unicode::UnicodeChar txtLapBuffer[TXTLAP_SIZE];
     static const uint16_t TXTSPEED_SIZE = 8;

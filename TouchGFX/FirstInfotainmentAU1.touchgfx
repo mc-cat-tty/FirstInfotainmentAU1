@@ -2330,7 +2330,7 @@
           },
           {
             "Type": "TextArea",
-            "Name": "txtTorin",
+            "Name": "txtSteerAngle",
             "X": 134,
             "Y": 404,
             "Width": 133,
