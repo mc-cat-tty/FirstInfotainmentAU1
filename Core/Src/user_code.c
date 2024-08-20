@@ -440,12 +440,12 @@ void task_lap_trigger() {
 
 	if (prevLap != msgDisplayInfo.lap) {
 		prevLap = msgDisplayInfo.lap;
-		MMR_PIN_Write(&lapPin, MMR_PIN_LOW);
+		MMR_PIN_Write(&lapPin, MMR_PIN_HIGH);
 		MMR_DELAY_Reset(&lowTime);
 	}
 
 	if (MMR_DELAY_WaitAsync(&lowTime)) {
-		MMR_PIN_Write(&lapPin, MMR_PIN_HIGH);
+		MMR_PIN_Write(&lapPin, MMR_PIN_LOW);
 	}
 }
 
@@ -496,7 +496,7 @@ void configuration() {
   }
 
   lapPin = MMR_Pin(LAP_COUNTER_TRIGGER_GPIO_Port, LAP_COUNTER_TRIGGER_Pin, false);
-  MMR_PIN_Write(&lapPin, MMR_PIN_HIGH);
+  MMR_PIN_Write(&lapPin, MMR_PIN_LOW);
 
   sdcCtrlPin = MMR_Pin(SDC_CTRL_GPIO_Port, SDC_CTRL_Pin, false);
   MMR_PIN_Write(&sdcCtrlPin, MMR_PIN_HIGH);
