@@ -509,6 +509,7 @@ void task_lap_trigger_manual() {
 		&& lap_trigger_async()
 	) {
 			isInsideStartingZone = false;
+			msgDisplayInfo.lap++;
 	}
 
 
