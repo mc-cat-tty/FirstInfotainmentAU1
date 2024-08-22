@@ -14,6 +14,7 @@
 #include <net.h>
 #include <util.h>
 #include <buffer.h>
+#include <math.h>
 
 
 extern osMessageQueueId_t dbgMsgQueue;
@@ -22,6 +23,7 @@ extern osMessageQueueId_t mainToGuiMsgQueue;
 extern SPI_HandleTypeDef hspi2;
 
 displayInfo msgDisplayInfo;
+GpsPoint currentPoint;
 int gear_mem = 0;
 
 MmrPin mcp2515csPin;
@@ -350,6 +352,11 @@ void process_single_can_message(MmrCanMessage* msg) {
       msgDisplayInfo.lap = MMR_BUFFER_ReadByte(msg->payload, 0);
       break;
 
+    case MMR_CAN_MESSAGE_ID_IMU_GPS_COORDS:
+    	currentPoint.latitude = MMR_BUFFER_ReadInt32(msg->payload, 0, MMR_ENCODING_LITTLE_ENDIAN) / 16777216.f;
+    	currentPoint.longitude = MMR_BUFFER_ReadInt32(msg->payload, 4, MMR_ENCODING_LITTLE_ENDIAN) / 8388608.f;
+	  break;
+
     /* CLUTCH RELEASE OK */
     case MMR_CAN_MESSAGE_ID_CS_CLUTCH_RELEASE_OK:
       msgDisplayInfo.CLT = false; /* No need to read RxData[7] since it will ALWAYS be 0! */
@@ -431,21 +438,95 @@ void task_resetchassis() {
   }
 }
 
-void task_lap_trigger() {
-	static uint16_t prevLap = 0;
-	static MmrDelay lowTime = {
+float to_rad(float degAngle) {
+	return degAngle * M_PI / 180;
+}
+
+/**
+ * @return great-circle distance in meters
+ */
+float gps_distance(GpsPoint x, GpsPoint y) {
+	static const float R = 6373000.0;
+
+	float latx = to_rad(x.latitude);
+	float laty = to_rad(y.latitude);
+
+	float dlon = to_rad(y.longitude)  - to_rad(x.longitude);
+	float dlat = laty - latx;
+
+	float a = pow(sin(dlat / 2), 2) + cos(latx) * cos(laty) * pow(sin(dlon / 2), 2);
+	float c = 2 * atan2(sqrt(a), sqrt(1 - a));
+
+	return R * c;
+}
+
+bool lap_trigger_async() {
+	static const MmrDelay lowTimeInit = {
 		.ms = 500,
 		.start = 0,
 	};
 
-	if (prevLap != msgDisplayInfo.lap) {
-		prevLap = msgDisplayInfo.lap;
+	static MmrDelay lowTime = lowTimeInit;
+
+	if(lowTime.start == lowTimeInit.start) {
 		MMR_PIN_Write(&lapPin, MMR_PIN_HIGH);
 		MMR_DELAY_Reset(&lowTime);
 	}
 
 	if (MMR_DELAY_WaitAsync(&lowTime)) {
 		MMR_PIN_Write(&lapPin, MMR_PIN_LOW);
+		lowTime = lowTimeInit;
+		return true;
+	}
+
+	return false;
+}
+
+void task_lap_trigger_autonomous() {
+	static uint16_t prevLap = 0;
+
+	if (prevLap != msgDisplayInfo.lap && lap_trigger_async()) {
+		prevLap = msgDisplayInfo.lap;
+	}
+}
+
+void task_lap_trigger_manual() {
+	static GpsPoint startPoint = {0, 0};
+	static bool isInsideStartingZone = true;
+	static const unsigned rpmEngineOnThreshold = 2000u;
+	static const unsigned startingZoneSquaredRadius = 1u;
+
+	if (
+		startPoint.latitude == 0
+		&& startPoint.longitude == 0
+		&& msgDisplayInfo.rpm > rpmEngineOnThreshold) {
+		startPoint = currentPoint;
+	}
+
+	if (
+		isInsideStartingZone
+		&& gps_distance(startPoint, currentPoint) > startingZoneSquaredRadius
+		&& lap_trigger_async()
+	) {
+			isInsideStartingZone = false;
+	}
+
+
+	if(
+		!isInsideStartingZone
+		&& gps_distance(startPoint, currentPoint) < startingZoneSquaredRadius
+	) {
+		isInsideStartingZone = true;
+	}
+
+}
+
+void task_lap_trigger() {
+	if(selectedMission == MMR_MISSION_MANUAL) {
+		task_lap_trigger_manual();
+	}
+	else {
+		task_lap_trigger_autonomous();
 	}
 }
 

@@ -40,4 +40,10 @@ typedef struct {
   } content;
 } guiToMainMsg;
 
+typedef struct {
+  float latitude;
+  float longitude;
+
+} GpsPoint;
+
 #endif // GUI_SHARED_DEFS_H
