@@ -23,7 +23,6 @@ extern osMessageQueueId_t mainToGuiMsgQueue;
 extern SPI_HandleTypeDef hspi2;
 
 displayInfo msgDisplayInfo;
-GpsPoint currentPoint;
 int gear_mem = 0;
 
 MmrPin mcp2515csPin;
@@ -123,6 +122,90 @@ void msgOnTask(MmrTaskResult result, const char* completed, const char* error) {
     userMessage(completed);
   else if (result == MMR_TASK_ERROR)
 	userMessage(error);
+}
+
+float to_rad(float degAngle) {
+	return degAngle * M_PI / 180;
+}
+
+/**
+ * @return great-circle distance in meters
+ */
+float gps_distance(GpsPoint x, GpsPoint y) {
+	static const float R = 6373000.0;
+
+	float latx = to_rad(x.latitude);
+	float laty = to_rad(y.latitude);
+
+	float dlon = to_rad(y.longitude)  - to_rad(x.longitude);
+	float dlat = laty - latx;
+
+	float a = pow(sin(dlat / 2), 2) + cos(latx) * cos(laty) * pow(sin(dlon / 2), 2);
+	float c = 2 * atan2(sqrt(a), sqrt(1 - a));
+
+	return R * c;
+}
+
+bool lap_trigger_async() {
+	static const MmrDelay lowTimeInit = {
+		.ms = 500,
+		.start = 0,
+	};
+
+	static MmrDelay lowTime = lowTimeInit;
+
+	if(lowTime.start == lowTimeInit.start) {
+		MMR_PIN_Write(&lapPin, MMR_PIN_HIGH);
+		MMR_DELAY_Reset(&lowTime);
+	}
+
+	if (MMR_DELAY_WaitAsync(&lowTime)) {
+		MMR_PIN_Write(&lapPin, MMR_PIN_LOW);
+		lowTime = lowTimeInit;
+		return true;
+	}
+
+	return false;
+}
+
+void process_lap_trigger_autonomous() {
+	static uint16_t prevLap = 0;
+
+	if (prevLap != msgDisplayInfo.lap && lap_trigger_async()) {
+		prevLap = msgDisplayInfo.lap;
+	}
+}
+
+void process_lap_trigger_manual(GpsPoint currentPoint) {
+	static GpsPoint startPoint = {0, 0};
+	static bool isInsideStartingZone = true;
+	static const unsigned rpmEngineOnThreshold = 2000u;
+	static const unsigned startingZoneSquaredRadius = 1u;
+
+	if (
+		startPoint.latitude == 0
+		&& startPoint.longitude == 0
+		&& msgDisplayInfo.rpm > rpmEngineOnThreshold) {
+		startPoint = currentPoint;
+	}
+
+	if (
+		isInsideStartingZone
+		&& gps_distance(startPoint, currentPoint) > startingZoneSquaredRadius
+		&& lap_trigger_async()
+	) {
+			isInsideStartingZone = false;
+			msgDisplayInfo.lap++;
+	}
+
+
+	if(
+		!isInsideStartingZone
+		&& gps_distance(startPoint, currentPoint) < startingZoneSquaredRadius
+	) {
+		isInsideStartingZone = true;
+	}
+
 }
 
 void task_run_ecu_tasks() {
@@ -269,6 +352,10 @@ void process_single_can_message(MmrCanMessage* msg) {
   if (!msg->isStandardId)
     return;
 
+  const bool isAutonomousMission = (selectedMission >= MMR_MISSION_ACCELERATION
+									&& selectedMission <= MMR_MISSION_INSPECTION);
+
+
   switch (msg->id) {
     /* RES */
     case MMR_CAN_MESSAGE_ID_RES:
@@ -281,7 +368,6 @@ void process_single_can_message(MmrCanMessage* msg) {
 
       uint8_t gear = msg->payload[4]; /* No need to read msg->payload[5] since it will ALWAYS be 0! */
       gear_mem = gear;
-      msgDisplayInfo.gear = gear;
 	  msgDisplayInfo.gear = gear;
 
 	  GPIO_PinState neutralLedState = gear == 0? GPIO_PIN_SET : GPIO_PIN_RESET;
@@ -289,6 +375,11 @@ void process_single_can_message(MmrCanMessage* msg) {
 
       uint16_t throttle = (msg->payload[7] << 8) | msg->payload[6];
       msgDisplayInfo.throttle_perc = (unsigned char)(throttle / 100);
+
+      if(!isAutonomousMission) {
+    	 msgDisplayInfo.speed = MMR_BUFFER_ReadFloat(msg->payload, 2,MMR_ENCODING_LITTLE_ENDIAN) / 100.f;
+      }
+
       break;
 
     case MMR_CAN_MESSAGE_ID_D_SPEED_ODOMETRY:
@@ -349,13 +440,18 @@ void process_single_can_message(MmrCanMessage* msg) {
       break;
 
     case MMR_CAN_MESSAGE_ID_D_LAP_COUNTER:
-      msgDisplayInfo.lap = MMR_BUFFER_ReadByte(msg->payload, 0);
+		msgDisplayInfo.lap = MMR_BUFFER_ReadByte(msg->payload, 0);
+		process_lap_trigger_autonomous();
       break;
 
-    case MMR_CAN_MESSAGE_ID_IMU_GPS_COORDS:
-    	currentPoint.latitude = MMR_BUFFER_ReadInt32(msg->payload, 0, MMR_ENCODING_LITTLE_ENDIAN) / 16777216.f;
-    	currentPoint.longitude = MMR_BUFFER_ReadInt32(msg->payload, 4, MMR_ENCODING_LITTLE_ENDIAN) / 8388608.f;
+    case MMR_CAN_MESSAGE_ID_IMU_GPS_COORDS: {
+    	float latitude = MMR_BUFFER_ReadInt32(msg->payload, 0, MMR_ENCODING_LITTLE_ENDIAN) / 16777216.f;
+    	float longitude = MMR_BUFFER_ReadInt32(msg->payload, 4, MMR_ENCODING_LITTLE_ENDIAN) / 8388608.f;
+    	if(!isAutonomousMission) {
+    		process_lap_trigger_manual((GpsPoint){latitude, longitude});
+    	}
 	  break;
+    }
 
     /* CLUTCH RELEASE OK */
     case MMR_CAN_MESSAGE_ID_CS_CLUTCH_RELEASE_OK:
@@ -369,6 +465,7 @@ void process_single_can_message(MmrCanMessage* msg) {
   // If no case matched (only the default case did), this is not reached.
   // Send a message containing the updated data to the display thread.
   osMessageQueuePut(mainToGuiMsgQueue, &msgDisplayInfo, 0U, 0U);
+
 }
 
 void task_process_can_rx() {
@@ -438,101 +535,6 @@ void task_resetchassis() {
   }
 }
 
-float to_rad(float degAngle) {
-	return degAngle * M_PI / 180;
-}
-
-/**
- * @return great-circle distance in meters
- */
-float gps_distance(GpsPoint x, GpsPoint y) {
-	static const float R = 6373000.0;
-
-	float latx = to_rad(x.latitude);
-	float laty = to_rad(y.latitude);
-
-	float dlon = to_rad(y.longitude)  - to_rad(x.longitude);
-	float dlat = laty - latx;
-
-	float a = pow(sin(dlat / 2), 2) + cos(latx) * cos(laty) * pow(sin(dlon / 2), 2);
-	float c = 2 * atan2(sqrt(a), sqrt(1 - a));
-
-	return R * c;
-}
-
-bool lap_trigger_async() {
-	static const MmrDelay lowTimeInit = {
-		.ms = 500,
-		.start = 0,
-	};
-
-	static MmrDelay lowTime = lowTimeInit;
-
-	if(lowTime.start == lowTimeInit.start) {
-		MMR_PIN_Write(&lapPin, MMR_PIN_HIGH);
-		MMR_DELAY_Reset(&lowTime);
-	}
-
-	if (MMR_DELAY_WaitAsync(&lowTime)) {
-		MMR_PIN_Write(&lapPin, MMR_PIN_LOW);
-		lowTime = lowTimeInit;
-		return true;
-	}
-
-	return false;
-}
-
-void task_lap_trigger_autonomous() {
-	static uint16_t prevLap = 0;
-
-	if (prevLap != msgDisplayInfo.lap && lap_trigger_async()) {
-		prevLap = msgDisplayInfo.lap;
-	}
-}
-
-void task_lap_trigger_manual() {
-	static GpsPoint startPoint = {0, 0};
-	static bool isInsideStartingZone = true;
-	static const unsigned rpmEngineOnThreshold = 2000u;
-	static const unsigned startingZoneSquaredRadius = 1u;
-
-	if (
-		startPoint.latitude == 0
-		&& startPoint.longitude == 0
-		&& msgDisplayInfo.rpm > rpmEngineOnThreshold) {
-		startPoint = currentPoint;
-	}
-
-	if (
-		isInsideStartingZone
-		&& gps_distance(startPoint, currentPoint) > startingZoneSquaredRadius
-		&& lap_trigger_async()
-	) {
-			isInsideStartingZone = false;
-			msgDisplayInfo.lap++;
-	}
-
-
-	if(
-		!isInsideStartingZone
-		&& gps_distance(startPoint, currentPoint) < startingZoneSquaredRadius
-	) {
-		isInsideStartingZone = true;
-	}
-
-}
-
-void task_lap_trigger() {
-	if(selectedMission == MMR_MISSION_MANUAL) {
-		task_lap_trigger_manual();
-	}
-	else {
-		task_lap_trigger_autonomous();
-	}
-}
-
-
-
 void configuration() {
   // Initialize the MMR libraries
   userMessage("INFO: Initialization...");
@@ -584,7 +586,6 @@ void configuration() {
   MMR_PIN_Write(&sdcCtrlPin, MMR_PIN_HIGH);
 }
 
-
 void userDefaultTask() {
 
   configuration();
@@ -593,13 +594,13 @@ void userDefaultTask() {
 
   while (true) {
     task_process_can_rx();
+
     task_process_gui_messages_rx();
     task_process_buttons();
-
     task_run_ecu_tasks();
     task_send_missionrequest();
     task_send_resopmode();
     task_resetchassis();
-    task_lap_trigger();
+
   }
 }
