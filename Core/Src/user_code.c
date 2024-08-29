@@ -285,7 +285,7 @@ bool sendCanMessage(MmrCanMessageId id, uint8_t* buf, uint8_t length) {
 // Mission request
 int mission_requests = 0;
 bool isSwitchingMission = false;
-MmrMission selectedMission;
+MmrMission selectedMission = MMR_MISSION_IDLE;
 
 void mission_request(MmrMission mission) {
   if (!isSwitchingMission) {
@@ -377,7 +377,7 @@ void process_single_can_message(MmrCanMessage* msg) {
       msgDisplayInfo.throttle_perc = (unsigned char)(throttle / 100);
 
       if(!isAutonomousMission) {
-    	 msgDisplayInfo.speed = MMR_BUFFER_ReadFloat(msg->payload, 2,MMR_ENCODING_LITTLE_ENDIAN) / 100.f;
+    	 msgDisplayInfo.speed = (float) MMR_BUFFER_ReadUint16(msg->payload, 2, MMR_ENCODING_LITTLE_ENDIAN) / 100.f;
       }
 
       break;
