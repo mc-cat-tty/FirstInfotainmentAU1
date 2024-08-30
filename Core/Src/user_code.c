@@ -180,7 +180,7 @@ void process_lap_trigger_manual(GpsPoint currentPoint) {
 	static GpsPoint startPoint = {0, 0};
 	static bool isInsideStartingZone = true;
 	static const unsigned rpmEngineOnThreshold = 2000u;
-	static const unsigned startingZoneSquaredRadius = 1u;
+	static const unsigned startingZoneSquaredRadius = 3u;
 
 	if (
 		startPoint.latitude == 0
@@ -191,6 +191,8 @@ void process_lap_trigger_manual(GpsPoint currentPoint) {
 
 	if (
 		isInsideStartingZone
+		&& startPoint.latitude != 0
+		&& startPoint.longitude != 0
 		&& gps_distance(startPoint, currentPoint) > startingZoneSquaredRadius
 		&& lap_trigger_async()
 	) {
@@ -445,8 +447,8 @@ void process_single_can_message(MmrCanMessage* msg) {
       break;
 
     case MMR_CAN_MESSAGE_ID_IMU_GPS_COORDS: {
-    	float latitude = MMR_BUFFER_ReadInt32(msg->payload, 0, MMR_ENCODING_LITTLE_ENDIAN) / 16777216.f;
-    	float longitude = MMR_BUFFER_ReadInt32(msg->payload, 4, MMR_ENCODING_LITTLE_ENDIAN) / 8388608.f;
+    	float latitude = MMR_BUFFER_ReadInt32(msg->payload, 0, MMR_ENCODING_BIG_ENDIAN) / 16777216.f;
+    	float longitude = MMR_BUFFER_ReadInt32(msg->payload, 4, MMR_ENCODING_BIG_ENDIAN) / 8388608.f;
     	if(!isAutonomousMission) {
     		process_lap_trigger_manual((GpsPoint){latitude, longitude});
     	}
