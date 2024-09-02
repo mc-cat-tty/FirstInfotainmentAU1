@@ -181,6 +181,20 @@ void MainInfotaimentView::setVoltage24v(float voltage24v) {
   txt24v.invalidate();
 }
 
+void MainInfotaimentView::setASState(bool ASS)
+{
+	if(!ASS) {
+		/* Turn RES EMERGENCY MODE box */
+		boxASS.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+		labelASS.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+	} else {
+		boxASS.setColor(touchgfx::Color::getColorFromRGB(0, 255, 0));
+		labelASS.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+	}
+	boxASS.invalidate();
+	labelASS.invalidate();
+}
+
 void MainInfotaimentView::setRES(int RES)
 {
 	if(!RES)

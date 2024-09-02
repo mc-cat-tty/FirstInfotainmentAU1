@@ -32,7 +32,8 @@ void Model::tick() {
   setSteeringAngle(((t % 1999)-999) / 10.f);
   setGear(t % 6);
   setSpeed(t % 150);
-  setRES(t % 4);
+  setRES((int)(t / 50) % 4);
+  setASState((t / 50) % 2);
   setLC(true);
   setCLT(true);
 
@@ -67,6 +68,7 @@ void Model::tick()
 
 		setThrottle_perc(info.throttle_perc);
 
+		setASState(info.isAssOn);
 		setRES(info.RES);
 		setLC(info.LC);
 		setCLT(info.CLT);

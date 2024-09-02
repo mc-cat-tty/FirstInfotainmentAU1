@@ -48,6 +48,7 @@ protected:
     touchgfx::BoxWithBorder boxBrake_1;
     touchgfx::BoxProgress progressBrakeRear;
     touchgfx::BoxWithBorder boxRES;
+    touchgfx::BoxWithBorder boxASS;
     touchgfx::Line line1_1;
     touchgfx::PainterRGB565 line1_1Painter;
     touchgfx::Line line1_1_1;
@@ -55,6 +56,7 @@ protected:
     touchgfx::TextArea labelLapCounter;
     touchgfx::TextAreaWithOneWildcard txtLap;
     touchgfx::TextArea labelRES;
+    touchgfx::TextArea labelASS;
     touchgfx::BoxProgress progressRpmLow;
     touchgfx::BoxProgress progressRpmMed;
     touchgfx::BoxProgress progressRpmHigh;

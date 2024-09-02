@@ -43,7 +43,7 @@
       <Text Id="LC" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">LC</Translation>
       </Text>
-      <Text Id="RES" Alignment="Left" TypographyId="Large">
+      <Text Id="ASS" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">RES</Translation>
       </Text>
       <Text Id="ResourceId1" Alignment="Left" TypographyId="Large">
@@ -60,6 +60,12 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="RES" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">RES</Translation>
+      </Text>
+      <Text Id="AS" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">AS</Translation>
+      </Text>
       <Text Id="__SingleUse_A8DL" Alignment="Center" TypographyId="SecondaryDriverInfo">
         <Translation Language="GB">RES</Translation>
       </Text>

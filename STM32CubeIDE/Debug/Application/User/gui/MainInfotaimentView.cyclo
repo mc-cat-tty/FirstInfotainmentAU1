@@ -9,11 +9,12 @@ MainInfotaimentView.cpp:9:6:virtual void MainInfotaimentView::setupScreen()	1
 MainInfotaimentView.cpp:19:6:void MainInfotaimentView::setGear(int)	2
 MainInfotaimentView.cpp:33:6:void MainInfotaimentView::setSpeed(int)	1
 MainInfotaimentView.cpp:135:6:void MainInfotaimentView::setP_Fuel(float)	1
-MainInfotaimentView.cpp:184:6:void MainInfotaimentView::setRES(int)	4
-MainInfotaimentView.cpp:207:6:void MainInfotaimentView::setLC(bool)	2
-MainInfotaimentView.cpp:225:6:void MainInfotaimentView::setCLT(bool)	2
-MainInfotaimentView.cpp:260:6:void MainInfotaimentView::setLap(int)	1
-MainInfotaimentView.cpp:269:6:void MainInfotaimentView::setDebugMessage(const char*)	2
+MainInfotaimentView.cpp:184:6:void MainInfotaimentView::setASState(bool)	2
+MainInfotaimentView.cpp:198:6:void MainInfotaimentView::setRES(int)	4
+MainInfotaimentView.cpp:221:6:void MainInfotaimentView::setLC(bool)	2
+MainInfotaimentView.cpp:239:6:void MainInfotaimentView::setCLT(bool)	2
+MainInfotaimentView.cpp:274:6:void MainInfotaimentView::setLap(int)	1
+MainInfotaimentView.cpp:283:6:void MainInfotaimentView::setDebugMessage(const char*)	2
 MainInfotaimentView.cpp:140:6:void MainInfotaimentView::setThrottle_Perc(int)	1
 MainInfotaimentView.cpp:145:6:void MainInfotaimentView::setFrontBrake_Perc(int)	1
 MainInfotaimentView.cpp:150:6:void MainInfotaimentView::setRearBrake_Perc(int)	1
@@ -23,4 +24,4 @@ MainInfotaimentView.cpp:101:6:void MainInfotaimentView::setT_Oil(int)	3
 MainInfotaimentView.cpp:118:6:void MainInfotaimentView::setP_Oil(float)	3
 MainInfotaimentView.cpp:155:6:void MainInfotaimentView::setOrinTemperature(float)	2
 MainInfotaimentView.cpp:171:6:void MainInfotaimentView::setVoltage24v(float)	3
-MainInfotaimentView.cpp:243:6:void MainInfotaimentView::setBattery_V(float)	3
+MainInfotaimentView.cpp:257:6:void MainInfotaimentView::setBattery_V(float)	3

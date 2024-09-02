@@ -9,11 +9,12 @@ C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_scree
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:19:6:void MainInfotaimentView::setGear(int)	8	static
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:33:6:void MainInfotaimentView::setSpeed(int)	8	static
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:135:6:void MainInfotaimentView::setP_Fuel(float)	16	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:184:6:void MainInfotaimentView::setRES(int)	8	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:207:6:void MainInfotaimentView::setLC(bool)	8	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:225:6:void MainInfotaimentView::setCLT(bool)	8	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:260:6:void MainInfotaimentView::setLap(int)	8	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:269:6:void MainInfotaimentView::setDebugMessage(const char*)	8	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:184:6:void MainInfotaimentView::setASState(bool)	8	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:198:6:void MainInfotaimentView::setRES(int)	8	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:221:6:void MainInfotaimentView::setLC(bool)	8	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:239:6:void MainInfotaimentView::setCLT(bool)	8	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:274:6:void MainInfotaimentView::setLap(int)	8	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:283:6:void MainInfotaimentView::setDebugMessage(const char*)	8	static
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:140:6:void MainInfotaimentView::setThrottle_Perc(int)	0	static
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:145:6:void MainInfotaimentView::setFrontBrake_Perc(int)	0	static
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:150:6:void MainInfotaimentView::setRearBrake_Perc(int)	0	static
@@ -23,4 +24,4 @@ C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_scree
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:118:6:void MainInfotaimentView::setP_Oil(float)	32	static
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:155:6:void MainInfotaimentView::setOrinTemperature(float)	32	static
 C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:171:6:void MainInfotaimentView::setVoltage24v(float)	32	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:243:6:void MainInfotaimentView::setBattery_V(float)	32	static
+C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentView.cpp:257:6:void MainInfotaimentView::setBattery_V(float)	32	static

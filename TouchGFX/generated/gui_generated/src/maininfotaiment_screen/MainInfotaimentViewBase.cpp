@@ -110,11 +110,17 @@ MainInfotaimentViewBase::MainInfotaimentViewBase() :
     progressBrakeRear.setValue(0);
     add(progressBrakeRear);
 
-    boxRES.setPosition(5, 253, 135, 64);
+    boxRES.setPosition(5, 303, 135, 47);
     boxRES.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     boxRES.setBorderColor(touchgfx::Color::getColorFromRGB(255, 234, 0));
     boxRES.setBorderSize(4);
     add(boxRES);
+
+    boxASS.setPosition(5, 253, 135, 47);
+    boxASS.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    boxASS.setBorderColor(touchgfx::Color::getColorFromRGB(255, 234, 0));
+    boxASS.setBorderSize(4);
+    add(boxASS);
 
     line1_1.setPosition(143, 75, 15, 42);
     line1_1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -149,11 +155,17 @@ MainInfotaimentViewBase::MainInfotaimentViewBase() :
     txtLap.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9DFI));
     add(txtLap);
 
-    labelRES.setXY(36, 267);
+    labelRES.setXY(42, 308);
     labelRES.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     labelRES.setLinespacing(0);
     labelRES.setTypedText(touchgfx::TypedText(T_RES));
     add(labelRES);
+
+    labelASS.setXY(51, 258);
+    labelASS.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    labelASS.setLinespacing(0);
+    labelASS.setTypedText(touchgfx::TypedText(T_AS));
+    add(labelASS);
 
     progressRpmLow.setXY(12, 20);
     progressRpmLow.setProgressIndicatorPosition(2, 2, 246, 16);
@@ -224,25 +236,25 @@ MainInfotaimentViewBase::MainInfotaimentViewBase() :
     txtPOil.setTypedText(touchgfx::TypedText(T___SINGLEUSE_5NKC));
     add(txtPOil);
 
-    boxLC.setPosition(5, 321, 135, 63);
+    boxLC.setPosition(5, 353, 135, 47);
     boxLC.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     boxLC.setBorderColor(touchgfx::Color::getColorFromRGB(255, 234, 0));
     boxLC.setBorderSize(4);
     add(boxLC);
 
-    labelLC.setXY(47, 335);
+    labelLC.setXY(53, 359);
     labelLC.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     labelLC.setLinespacing(0);
     labelLC.setTypedText(touchgfx::TypedText(T_LC));
     add(labelLC);
 
-    boxClutch.setPosition(5, 388, 135, 63);
+    boxClutch.setPosition(5, 403, 135, 47);
     boxClutch.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     boxClutch.setBorderColor(touchgfx::Color::getColorFromRGB(255, 234, 0));
     boxClutch.setBorderSize(4);
     add(boxClutch);
 
-    labelClutch.setXY(39, 402);
+    labelClutch.setXY(45, 408);
     labelClutch.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     labelClutch.setLinespacing(0);
     labelClutch.setTypedText(touchgfx::TypedText(T_CLUTCH));

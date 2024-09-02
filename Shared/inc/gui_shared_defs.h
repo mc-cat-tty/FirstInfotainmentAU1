@@ -13,6 +13,7 @@ typedef struct {
 	uint8_t throttle_perc;
 	uint8_t brake_perc;
 	float P_oil;
+	bool isAssOn;
 	int RES;
 	bool LC;
 	bool CLT;

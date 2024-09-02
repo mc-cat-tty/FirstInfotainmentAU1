@@ -54,6 +54,8 @@ public:
     void setLap(int lap_recv) { lap = lap_recv; }
     int getLap() { return lap; }
 
+    void setASState(bool recvASS) { ASS = recvASS; }
+    bool getASState() { return ASS; }
     void setRES(int recvRES) { RES = recvRES; }
     int getRES() { return RES; }
     void setLC(bool recvLC) { LC= recvLC; }
@@ -102,6 +104,7 @@ protected:
 
     float P_oil, P_fuel;
 
+    bool ASS;
     int RES;
     bool LC, CLT;
 

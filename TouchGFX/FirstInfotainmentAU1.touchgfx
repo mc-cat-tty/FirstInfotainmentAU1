@@ -50,7 +50,7 @@
             "X": 363,
             "Y": 40,
             "Width": 75,
-            "Height": 122,
+            "Height": 121,
             "TextId": "__SingleUse_8VH0",
             "TextRotation": "0",
             "Color": {
@@ -271,9 +271,22 @@
             "Type": "BoxWithBorder",
             "Name": "boxRES",
             "X": 5,
+            "Y": 303,
+            "Width": 135,
+            "Height": 47,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 234
+            },
+            "BorderSize": 4
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxASS",
+            "X": 5,
             "Y": 253,
             "Width": 135,
-            "Height": 64,
+            "Height": 47,
             "BorderColor": {
               "Red": 255,
               "Green": 234
@@ -350,11 +363,27 @@
           {
             "Type": "TextArea",
             "Name": "labelRES",
-            "X": 36,
-            "Y": 267,
+            "X": 42,
+            "Y": 308,
             "Width": 61,
             "Height": 36,
             "TextId": "RES",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "labelASS",
+            "X": 51,
+            "Y": 258,
+            "Width": 42,
+            "Height": 36,
+            "TextId": "AS",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
@@ -522,9 +551,9 @@
             "Type": "BoxWithBorder",
             "Name": "boxLC",
             "X": 5,
-            "Y": 321,
+            "Y": 353,
             "Width": 135,
-            "Height": 63,
+            "Height": 47,
             "BorderColor": {
               "Red": 255,
               "Green": 234
@@ -534,8 +563,8 @@
           {
             "Type": "TextArea",
             "Name": "labelLC",
-            "X": 47,
-            "Y": 335,
+            "X": 53,
+            "Y": 359,
             "Width": 38,
             "Height": 36,
             "TextId": "LC",
@@ -551,9 +580,9 @@
             "Type": "BoxWithBorder",
             "Name": "boxClutch",
             "X": 5,
-            "Y": 388,
+            "Y": 403,
             "Width": 135,
-            "Height": 63,
+            "Height": 47,
             "BorderColor": {
               "Red": 255,
               "Green": 234
@@ -563,8 +592,8 @@
           {
             "Type": "TextArea",
             "Name": "labelClutch",
-            "X": 39,
-            "Y": 402,
+            "X": 45,
+            "Y": 408,
             "Width": 54,
             "Height": 36,
             "TextId": "CLUTCH",

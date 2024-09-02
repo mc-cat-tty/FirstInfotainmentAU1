@@ -45,6 +45,7 @@ public:
     void setOrinTemperature(float orinTemperature);
     void setVoltage24v(float voltage24v);
 
+    void setASState(bool ASS);
     void setRES(int RES);
     void setLC(bool LC);
     void setCLT(bool CLT);

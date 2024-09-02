@@ -44,6 +44,7 @@ void MainInfotaimentPresenter::infoChanged()
 	view.setFrontBrake_Perc(model->getFrontBrakePerc());
 	view.setRearBrake_Perc(model->getRearBrakePerc());
 
+	view.setASState(model->getASState());
 	view.setRES(model->getRES());
 	view.setLC(model->getLC());
 	view.setCLT(model->getCLT());

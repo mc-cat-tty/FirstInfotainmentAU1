@@ -359,6 +359,11 @@ void process_single_can_message(MmrCanMessage* msg) {
 
 
   switch (msg->id) {
+  	case MMR_CAN_MESSAGE_ID_ASS_ON:
+  	  /* 0 = AS manager off */
+  	  /* 1 = AS manager on */
+  	  msgDisplayInfo.isAssOn = msg->payload[0];
+	  break;
     /* RES */
     case MMR_CAN_MESSAGE_ID_RES:
       msgDisplayInfo.RES = msg->payload[0];  /* 0 = emergency, 1 = GO */

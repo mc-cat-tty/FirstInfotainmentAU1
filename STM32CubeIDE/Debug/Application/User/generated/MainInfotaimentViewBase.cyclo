@@ -28,7 +28,7 @@ AbstractPainter.hpp:61:34:virtual touchgfx::HAL::RenderingMethod touchgfx::Abstr
 AbstractPainter.hpp:78:18:virtual bool touchgfx::AbstractPainter::setup(const touchgfx::Rect&) const	1
 AbstractPainter.hpp:90:18:virtual void touchgfx::AbstractPainter::tearDown() const	1
 View.hpp:36:7:touchgfx::View<MainInfotaimentPresenter>::~View()	1
-MainInfotaimentViewBase.cpp:509:6:virtual void MainInfotaimentViewBase::setupScreen()	1
+MainInfotaimentViewBase.cpp:521:6:virtual void MainInfotaimentViewBase::setupScreen()	1
 Callback.hpp:357:8:touchgfx::Callback<MainInfotaimentViewBase, const touchgfx::AbstractButton&>::~Callback()	1
 TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = MainInfotaimentViewBase; T1 = const touchgfx::AbstractButton&]	2
@@ -37,12 +37,12 @@ TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
 TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	1
 Callback.hpp:357:8:virtual touchgfx::Callback<MainInfotaimentViewBase, const touchgfx::AbstractButton&>::~Callback()	1
 View.hpp:36:7:virtual touchgfx::View<MainInfotaimentPresenter>::~View()	1
-MainInfotaimentViewBase.cpp:504:1:MainInfotaimentViewBase::~MainInfotaimentViewBase()	1
-MainInfotaimentViewBase.cpp:504:1:virtual MainInfotaimentViewBase::~MainInfotaimentViewBase()	1
+MainInfotaimentViewBase.cpp:516:1:MainInfotaimentViewBase::~MainInfotaimentViewBase()	1
+MainInfotaimentViewBase.cpp:516:1:virtual MainInfotaimentViewBase::~MainInfotaimentViewBase()	1
 Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	1
 TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	1
-MainInfotaimentViewBase.cpp:514:6:void MainInfotaimentViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	4
+MainInfotaimentViewBase.cpp:526:6:void MainInfotaimentViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	4
 Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
 Widget.hpp:36:7:touchgfx::Widget::Widget()	1
