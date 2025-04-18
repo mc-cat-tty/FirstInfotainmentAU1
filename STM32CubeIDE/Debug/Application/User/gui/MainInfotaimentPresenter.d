@@ -1,5 +1,5 @@
 Application/User/gui/MainInfotaimentPresenter.o: \
- C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentPresenter.cpp \
+ C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/gui/src/maininfotaiment_screen/MainInfotaimentPresenter.cpp \
  ../../TouchGFX/gui/include/gui/maininfotaiment_screen/MainInfotaimentView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/maininfotaiment_screen/MainInfotaimentViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
@@ -23,6 +23,11 @@ Application/User/gui/MainInfotaimentPresenter.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
@@ -37,10 +42,9 @@ Application/User/gui/MainInfotaimentPresenter.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
- C:/Users/nuc/Desktop/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h \
- C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h \
+ C:/Users/Enrico/Formula/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h \
+ C:/Users/Enrico/Formula/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../../TouchGFX/gui/include/gui/maininfotaiment_screen/MainInfotaimentPresenter.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -98,6 +102,11 @@ Application/User/gui/MainInfotaimentPresenter.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextureMapTypes.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorFontRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VectorRenderer.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Matrix3x3.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:
@@ -112,10 +121,9 @@ Application/User/gui/MainInfotaimentPresenter.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h:
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h:
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/Shared/inc/gui_shared_defs.h:
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/mmr_core/app/core/net/inc/missions.h:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../../TouchGFX/gui/include/gui/maininfotaiment_screen/MainInfotaimentPresenter.hpp:
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:

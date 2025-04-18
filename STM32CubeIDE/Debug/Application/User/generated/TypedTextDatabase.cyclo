@@ -1,6 +1,6 @@
-TypedTextDatabase.cpp:174:43:const touchgfx::TypedText::TypedTextData* TypedTextDatabase::getInstance(touchgfx::LanguageId)	1
-TypedTextDatabase.cpp:179:10:uint16_t TypedTextDatabase::getInstanceSize()	1
-TypedTextDatabase.cpp:184:24:const touchgfx::Font** TypedTextDatabase::getFonts()	1
-TypedTextDatabase.cpp:189:23:const touchgfx::Font* TypedTextDatabase::setFont(touchgfx::FontId, const touchgfx::Font*)	1
-TypedTextDatabase.cpp:196:6:void TypedTextDatabase::resetFont(touchgfx::FontId)	10
-TypedTextDatabase.cpp:229:1:cpp)	1
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:174:43:const touchgfx::TypedText::TypedTextData* TypedTextDatabase::getInstance(touchgfx::LanguageId)	1
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:179:10:uint16_t TypedTextDatabase::getInstanceSize()	1
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:184:24:const touchgfx::Font** TypedTextDatabase::getFonts()	1
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:189:23:const touchgfx::Font* TypedTextDatabase::setFont(touchgfx::FontId, const touchgfx::Font*)	1
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:196:6:void TypedTextDatabase::resetFont(touchgfx::FontId)	10
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:229:1:cpp)	1

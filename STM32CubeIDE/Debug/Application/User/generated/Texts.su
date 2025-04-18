@@ -8,11 +8,13 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp:429:20:virtual int8_t touchgfx::Font::getKerning(touchgfx::Unicode::UnicodeChar, const touchgfx::GlyphNode*) const	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp:451:29:virtual const uint16_t* touchgfx::Font::getGSUBTable() const	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp:461:45:virtual const touchgfx::FontContextualFormsTable* touchgfx::Font::getContextualFormsTable() const	0	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:13:10:) const	12	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:22:10:) const	16	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:31:32:touchgfx::Unicode::UnicodeChar touchgfx::TextProvider::getNextLigature(touchgfx::TextDirection)	8	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:45:6:void touchgfx::TextProvider::initializeInternal()	0	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:50:6:)	32	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:148:6:static void touchgfx::Texts::setLanguage(touchgfx::LanguageId)	16	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:178:6:static void touchgfx::Texts::setTranslation(touchgfx::LanguageId, const void*)	0	static
-C:/Users/nuc/Desktop/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:183:39:const UnicodeChar* touchgfx::Texts::getText(touchgfx::TypedTextId) const	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp:471:18:virtual bool touchgfx::Font::isVectorBasedFont() const	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp:481:19:virtual float touchgfx::Font::getScaleFactor() const	0	static
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:13:10:) const	12	static
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:22:10:) const	16	static
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:31:32:touchgfx::Unicode::UnicodeChar touchgfx::TextProvider::getNextLigature(touchgfx::TextDirection)	8	static
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:45:6:void touchgfx::TextProvider::initializeInternal()	0	static
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:50:6:)	32	static
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:148:6:static void touchgfx::Texts::setLanguage(touchgfx::LanguageId)	16	static
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:178:6:static void touchgfx::Texts::setTranslation(touchgfx::LanguageId, const void*)	0	static
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/TouchGFX/generated/texts/src/Texts.cpp:183:39:const touchgfx::Unicode::UnicodeChar* touchgfx::Texts::getText(touchgfx::TypedTextId) const	0	static

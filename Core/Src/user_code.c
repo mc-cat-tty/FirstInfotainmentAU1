@@ -247,8 +247,6 @@ void task_run_ecu_tasks() {
 		runningEcuTask = ECU_Task_None;
 }
 
-
-
 // Helpers for CAN
 typedef struct {
   bool (*action)();

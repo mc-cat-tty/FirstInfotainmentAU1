@@ -1,2 +1,2 @@
-stm32f4xx_hal_ltdc_ex.c:70:19:HAL_LTDCEx_StructInitFromVideoConfig	1
-stm32f4xx_hal_ltdc_ex.c:109:19:HAL_LTDCEx_StructInitFromAdaptedCommandConfig	1
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc_ex.c:70:19:HAL_LTDCEx_StructInitFromVideoConfig	1
+C:/Users/Enrico/Formula/FirstInfotainmentAU1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ltdc_ex.c:109:19:HAL_LTDCEx_StructInitFromAdaptedCommandConfig	1

@@ -1,5 +1,5 @@
 Application/User/freertos.o: \
- C:/Users/nuc/Desktop/FirstInfotainmentAU1/Core/Src/freertos.c \
+ C:/Users/Enrico/Formula/FirstInfotainmentAU1/Core/Src/freertos.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
