@@ -1,8 +1,8 @@
 /******************************************************************************
-* Copyright (c) 2018(-2025) STMicroelectronics.
+* Copyright (c) 2018(-2023) STMicroelectronics.
 * All rights reserved.
 *
-* This file is part of the TouchGFX 4.25.0 distribution.
+* This file is part of the TouchGFX 4.22.0 distribution.
 *
 * This software is licensed under terms that can be found in the LICENSE file in
 * the root directory of this software component.
@@ -45,7 +45,8 @@ public:
         : Transition(),
           animationSteps(transitionSteps),
           animationCounter(0),
-          calculatedValue(0)
+          calculatedValue(0),
+          solid()
     {
         switch (templateDirection)
         {
@@ -66,6 +67,9 @@ public:
             // Nothing to do here
             break;
         }
+
+        // Ensure that the solid area covers the entire screen
+        solid.setPosition(0, 0, HAL::DISPLAY_WIDTH, HAL::DISPLAY_HEIGHT);
     }
 
     /**
@@ -160,6 +164,11 @@ public:
         }
     }
 
+    virtual void tearDown()
+    {
+        screenContainer->remove(solid);
+    }
+
     virtual void init()
     {
         Transition::init();
@@ -182,15 +191,8 @@ public:
 
             d = d->getNextSibling();
         }
-    }
 
-    virtual void invalidate()
-    {
-        // The last step when finalizing a transition (see MVPApplication::finalizeTransition)
-        // is to call invalidate on the transition. For the CoverTransition we want to erase any
-        // invalidated areas that might have been added when setting up the new screen, which
-        // is the first step of finalizing a transition (see MVPApplication::finalizeTransition).
-        Application::getInstance()->clearCachedAreas();
+        screenContainer->add(solid);
     }
 
 private:
@@ -198,6 +200,7 @@ private:
     uint8_t animationCounter;     ///< Current step in the transition animation.
     int16_t targetValue;          ///< The target value for the transition animation.
     int16_t calculatedValue;      ///< The current X or Y value
+    FullSolidRect solid;          ///< A solid rect that covers the entire screen to avoid copying elements outside
 };
 
 } // namespace touchgfx

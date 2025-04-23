@@ -1,7 +1,7 @@
-# Copyright (c) 2018(-2025) STMicroelectronics.
+# Copyright (c) 2018(-2023) STMicroelectronics.
 # All rights reserved.
 #
-# This file is part of the TouchGFX 4.25.0 distribution.
+# This file is part of the TouchGFX 4.22.0 distribution.
 #
 # This software is licensed under terms that can be found in the LICENSE file in
 # the root directory of this software component.
@@ -12,7 +12,7 @@ require 'json'
 require 'lib/string_collector'
 
 class LanguagesCpp
-  def initialize(string_indices, characters, text_entries, languages, output_directory, remap_global, generate_binary_translations, copy_translations_to_ram)
+  def initialize(string_indices, characters, text_entries, languages, output_directory, remap_global, generate_binary_translations)
     @string_indices = string_indices #dictionary of all string indices into the characters array
     @characters = characters
     @text_entries = text_entries
@@ -20,7 +20,6 @@ class LanguagesCpp
     @output_directory = output_directory
     @remap_global = remap_global
     @generate_binary_translations = generate_binary_translations
-    @copy_translations_to_ram = copy_translations_to_ram
   end
   def run
     # First remove any unused LanguageXX.cpp files (ie. remove
@@ -36,7 +35,7 @@ class LanguagesCpp
 
     @languages.each_with_index do |language, language_index|
       language_index = 0 if @remap_global=="yes"
-      LanguageXxCpp.new(@string_indices, language_index, @characters, @text_entries, @output_directory, @remap_global, @generate_binary_translations, @copy_translations_to_ram, language).run
+      LanguageXxCpp.new(@string_indices, language_index, @characters, @text_entries, @output_directory, @remap_global, @generate_binary_translations, language).run
     end
   end
 end
@@ -44,12 +43,11 @@ end
 class LanguageXxCpp < Template
   Presenter = Struct.new(:text_id, :int_array)
 
-  def initialize(string_indices, language_index, characters, text_entries, output_directory, remap_global, generate_binary_translations, copy_translations_to_ram, language)
+  def initialize(string_indices, language_index, characters, text_entries, output_directory, remap_global, generate_binary_translations, language)
     @string_indices = string_indices #dictionary of all string indices into the characters array
     @characters = characters
     @remap_global = remap_global
     @generate_binary_translations = generate_binary_translations
-    @copy_translations_to_ram = copy_translations_to_ram
     @language = language
     @language_index = language_index
     super(text_entries, [], [], output_directory)
@@ -76,7 +74,6 @@ class LanguageXxCpp < Template
     @cache["remap"] = @remap_global
     @cache["language"] = @language
     @cache["language_index"] = @language_index
-    @cache["copy_translations"] = @copy_translations_to_ram
     #save text ids and index
     @cache["indices"] = get_text_entries.collect do |entry|
       [get_string_index(entry), entry.text_id]
@@ -148,14 +145,4 @@ class LanguageXxCpp < Template
   def get_substrings_and_offsets(lang_index)
     unicode_array_to_hex_offset_comment(@characters[lang_index])
   end
-
-  #indeces arrays are in internal flash when copying, but texts are in TEXT_LOCATION
-  def get_pragma
-    @pragma ||= @copy_translations_to_ram=="yes" ? "" : "TEXT_LOCATION_FLASH_PRAGMA\r\n"
-  end
-
-  def get_attribute
-    @attribute ||= @copy_translations_to_ram=="yes" ? "" : " TEXT_LOCATION_FLASH_ATTRIBUTE"
-  end
-
 end

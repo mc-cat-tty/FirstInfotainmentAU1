@@ -1,8 +1,8 @@
 /******************************************************************************
-* Copyright (c) 2018(-2025) STMicroelectronics.
+* Copyright (c) 2018(-2023) STMicroelectronics.
 * All rights reserved.
 *
-* This file is part of the TouchGFX 4.25.0 distribution.
+* This file is part of the TouchGFX 4.22.0 distribution.
 *
 * This software is licensed under terms that can be found in the LICENSE file in
 * the root directory of this software component.
@@ -25,8 +25,6 @@
 #include <touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp>
 #include <touchgfx/widgets/canvas/Canvas.hpp>
 #include <touchgfx/widgets/canvas/CanvasWidget.hpp>
-#include <touchgfx/widgets/canvas/PainterARGB8888.hpp>
-#include <touchgfx/widgets/canvas/PainterARGB8888LinearGradient.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565LinearGradient.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB888.hpp>
@@ -45,16 +43,15 @@ class CWRVectorRenderer : public VectorRenderer
 {
 public:
     /**
-     * Start a new drawing (invalidated area) within the given canvas area.
-     * The canvas area typically corresponds to the area of a Widget and is
-     * given in absolute coordinates, whereas the invalidated area is given
-     * in relative coordinates.
+     * Start a new drawing in the given area. The area typically
+     * corresponds to an invalidated area of a Widget.
      * Implementations may lock the framebuffer here.
+     * The drawing area is given in the widget coordinate system.
      *
-     * @param  canvasAreaAbs        The canvas dimensions in absolute coordinates.
-     * @param  invalidatedAreaRel   The area which should be updated in relative coordinates.
+     * @param renderer    The Widget that does the rendering.
+     * @param drawingArea The area of the screen to draw in.
      */
-    virtual void setup(const Rect& canvasAreaAbs, const Rect& invalidatedAreaRel);
+    virtual void setup(const Widget& renderer, const Rect& drawingArea);
 
     /**
      * Set the drawing mode for the VectorRenderer. The mode will be
@@ -167,11 +164,6 @@ public:
     virtual void setTransformationMatrix(const Matrix3x3& m);
 
 private:
-    Rect canvasAreaAbsolute;
-    Rect dirtyAreaAbsolute;
-    uint8_t canvasAlpha;
-    const AbstractPainter* canvasPainter;
-
     DrawMode drawMode;
     uint8_t alpha;
     uint8_t colorAlpha;
@@ -211,8 +203,8 @@ private:
     class StrokeCanvas : private Canvas
     {
     public:
-        StrokeCanvas(const AbstractPainter* const painter, const Rect& canvasAreaAbs, const Rect& invalidatedAreaRel, uint8_t globalAlpha, const Matrix3x3& m)
-            : Canvas(painter, canvasAreaAbs, invalidatedAreaRel, globalAlpha),
+        StrokeCanvas(const CanvasWidget* widget, const Rect& invalidatedArea, const Matrix3x3& m)
+            : Canvas(widget, invalidatedArea),
               matrix(m),
               firstLineTo(false), noLineHasBeenDrawn(true), drawLineCapInsteadOfLineJoin(false),
               strokeWidthHalf(1.0f), miterLimitSquared(0.0f), strokeLineJoin(VG_STROKE_LINEJOIN_BEVEL), strokeLineCap(VG_STROKE_LINECAP_BUTT), strokeAlpha(255),
@@ -351,32 +343,6 @@ class CWRVectorRendererRGB888 : public CWRVectorRenderer
 private:
     PainterRGB888 colorPainter;
     PainterRGB888LinearGradient linearPainter;
-};
-
-/**
- * Implementation of the CWRVectorRendererInterface
- * for the ARGB8888 framebuffer format.
- */
-class CWRVectorRendererARGB8888 : public CWRVectorRenderer
-{
-    virtual AbstractPainterLinearGradient& getLinearPainter()
-    {
-        return linearPainter;
-    }
-
-    virtual AbstractPainterColor& getColorPainterColor()
-    {
-        return colorPainter;
-    }
-
-    virtual AbstractPainter& getColorPainter()
-    {
-        return colorPainter;
-    }
-
-private:
-    PainterARGB8888 colorPainter;
-    PainterARGB8888LinearGradient linearPainter;
 };
 
 } // namespace touchgfx

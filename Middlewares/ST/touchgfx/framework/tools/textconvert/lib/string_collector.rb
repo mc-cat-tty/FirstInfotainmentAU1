@@ -1,7 +1,7 @@
-# Copyright (c) 2018(-2025) STMicroelectronics.
+# Copyright (c) 2018(-2023) STMicroelectronics.
 # All rights reserved.
 #
-# This file is part of the TouchGFX 4.25.0 distribution.
+# This file is part of the TouchGFX 4.22.0 distribution.
 #
 # This software is licensed under terms that can be found in the LICENSE file in
 # the root directory of this software component.
@@ -11,11 +11,7 @@
 CollectorStruct = Struct.new(:text_entries, :languages, :typographies)
 
 def get_getFont_name(typography)
-  if typography.is_vector
-    "getFont_vector_#{typography.cpp_name}_#{typography.font_size}"
-  else
-    "getFont_#{typography.cpp_name}_#{typography.font_size}_#{typography.bpp}bpp"
-  end
+  "getFont_#{typography.cpp_name}_#{typography.font_size}_#{typography.bpp}bpp"
 end
 
 def unicode_array_to_hex_offset_comment(array)

@@ -1,7 +1,7 @@
-# Copyright (c) 2018(-2025) STMicroelectronics.
+# Copyright (c) 2018(-2023) STMicroelectronics.
 # All rights reserved.
 #
-# This file is part of the TouchGFX 4.25.0 distribution.
+# This file is part of the TouchGFX 4.22.0 distribution.
 #
 # This software is licensed under terms that can be found in the LICENSE file in
 # the root directory of this software component.
@@ -60,11 +60,7 @@ class ApplicationFontProviderCpp < Template
   private
 
   def typography_name(typography)
-    if typography.is_vector
-      "Vector_#{typography.cpp_name}_#{typography.font_size}"
-    else
-      "#{typography.cpp_name}_#{typography.font_size}_#{typography.bpp}bpp"
-    end
+    "#{typography.cpp_name}_#{typography.font_size}_#{typography.bpp}bpp"
   end
 
   def font_index
